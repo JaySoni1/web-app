@@ -6,7 +6,7 @@ import { ActivatedRouteSnapshot } from '@angular/router';
 import { Observable } from 'rxjs';
 
 /** Custom Services */
-import { GroupsService } from '../groups.service';
+import { SelfRunReportService } from '@fineract/client';
 
 /**
  * Group Summary resolver.
@@ -14,9 +14,9 @@ import { GroupsService } from '../groups.service';
 @Injectable()
 export class GroupSummaryResolver {
   /**
-   * @param {GroupsService} GroupsService Groups service.
+   * @param {SelfRunReportService} SelfRunReportService Groups service.
    */
-  constructor(private groupsService: GroupsService) {}
+  constructor(private selfRunReportService: SelfRunReportService) {}
 
   /**
    * Returns the Group Summary data.
@@ -25,6 +25,11 @@ export class GroupSummaryResolver {
    */
   resolve(route: ActivatedRouteSnapshot): Observable<any> {
     const groupId = route.parent.paramMap.get('groupId');
-    return this.groupsService.getGroupSummary(groupId);
+    // Use runReport1 with reportName and query params
+    return this.selfRunReportService.runReport1({
+      reportName: 'GroupSummaryCounts',
+      // @ts-ignore: allow extra params for query
+      R_groupId: groupId
+    });
   }
 }

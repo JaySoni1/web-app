@@ -7,8 +7,8 @@ import { Router, ActivatedRoute } from '@angular/router';
 import { DeleteDialogComponent } from 'app/shared/delete-dialog/delete-dialog.component';
 
 /** Custom Services */
-import { GroupsService } from 'app/groups/groups.service';
-import { ClientService } from '@fineract/client';
+import { GroupsService, ClientService } from '@fineract/client';
+import { GroupsService as CustomGroupsService } from 'app/groups/groups.service';
 import { MatDialog } from '@angular/material/dialog';
 import { MatAutocompleteTrigger, MatAutocomplete, MatOption } from '@angular/material/autocomplete';
 import { MatIconButton } from '@angular/material/button';
@@ -17,6 +17,7 @@ import { MatListSubheaderCssMatStyler, MatNavList } from '@angular/material/list
 import { MatLine } from '@angular/material/grid-list';
 import { MatTooltip } from '@angular/material/tooltip';
 import { STANDALONE_SHARED_IMPORTS } from 'app/standalone-shared.module';
+import { privateDecrypt } from 'crypto';
 
 /**
  * Manage Group Members Component
@@ -58,7 +59,8 @@ export class ManageGroupMembersComponent implements AfterViewInit {
     private route: ActivatedRoute,
     private groupsService: GroupsService,
     private clientsService: ClientService,
-    public dialog: MatDialog
+    public dialog: MatDialog,
+    private customGroupsService: CustomGroupsService
   ) {
     this.route.data.subscribe((data: { groupActionData: any }) => {
       this.groupData = data.groupActionData;
@@ -92,7 +94,7 @@ export class ManageGroupMembersComponent implements AfterViewInit {
    */
   addClient() {
     if (!this.clientMembers.includes(this.clientChoice.value)) {
-      this.groupsService
+      this.customGroupsService
         .executeGroupCommand(this.groupData.id, 'associateClients', { clientMembers: [this.clientChoice.value.id] })
         .subscribe(() => {
           this.clientMembers.push(this.clientChoice.value);
@@ -111,7 +113,7 @@ export class ManageGroupMembersComponent implements AfterViewInit {
     });
     removeMemberDialogRef.afterClosed().subscribe((response: any) => {
       if (response.delete) {
-        this.groupsService
+        this.customGroupsService
           .executeGroupCommand(this.groupData.id, 'disassociateClients', { clientMembers: [client.id] })
           .subscribe(() => {
             this.clientMembers.splice(index, 1);

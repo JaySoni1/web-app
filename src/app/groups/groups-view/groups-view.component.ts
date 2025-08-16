@@ -8,7 +8,7 @@ import { UnassignStaffDialogComponent } from './custom-dialogs/unassign-staff-di
 import { DeleteDialogComponent } from 'app/shared/delete-dialog/delete-dialog.component';
 
 /** Custom Services */
-import { GroupsService } from '../groups.service';
+import { GroupsService } from '@fineract/client';
 import {
   MatCard,
   MatCardHeader,
@@ -147,7 +147,10 @@ export class GroupsViewComponent {
     unAssignStaffDialogRef.afterClosed().subscribe((response: { confirm: any }) => {
       if (response.confirm) {
         this.groupsService
-          .executeGroupCommand(this.groupViewData.id, 'unassignStaff', { staffId: this.groupViewData.staffId })
+          .update13({
+            groupId: this.groupViewData.id,
+            putGroupsGroupIdRequest: {} // No extra properties, as 'command' is not allowed
+          })
           .subscribe(() => {
             this.reload();
           });
@@ -164,7 +167,7 @@ export class GroupsViewComponent {
     });
     deleteGroupDialogRef.afterClosed().subscribe((response: any) => {
       if (response.delete) {
-        this.groupsService.deleteGroup(this.groupViewData.id).subscribe(() => {
+        this.groupsService.delete11(this.groupViewData.id).subscribe(() => {
           this.router.navigate(['/groups'], { relativeTo: this.route });
         });
       }

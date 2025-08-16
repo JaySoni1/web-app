@@ -10,7 +10,7 @@ import {
 import { Router, ActivatedRoute, RouterLink } from '@angular/router';
 
 /** Custom Services */
-import { GroupsService } from '../groups.service';
+import { GroupsService } from '@fineract/client';
 import { SettingsService } from 'app/settings/settings.service';
 import { Dates } from 'app/core/utils/dates';
 import { STANDALONE_SHARED_IMPORTS } from 'app/standalone-shared.module';
@@ -135,7 +135,7 @@ export class EditGroupComponent implements OnInit {
       dateFormat,
       locale
     };
-    this.groupService.updateGroup(data, this.groupData.id).subscribe((response: any) => {
+    this.groupService.update13(data, this.groupData.id).subscribe((response: any) => {
       this.router.navigate(['../'], { relativeTo: this.route });
     });
   }

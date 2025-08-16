@@ -6,7 +6,7 @@ import { ActivatedRouteSnapshot } from '@angular/router';
 import { Observable } from 'rxjs';
 
 /** Custom Services */
-import { GroupsService } from '../groups.service';
+import { GroupsService, CalendarService, LoanProductsService } from '@fineract/client';
 
 /**
  * Group Actions data resolver.
@@ -14,9 +14,15 @@ import { GroupsService } from '../groups.service';
 @Injectable()
 export class GroupActionsResolver {
   /**
-   * @param {GroupsService} groupsService Groups service.
+   * @param {GroupsService} groupsService,
+   * @param {CalendarService} CalendarService,
+   * @param {LoanProductsService} LoanProductsService
    */
-  constructor(private groupsService: GroupsService) {}
+  constructor(
+    private groupsService: GroupsService,
+    private calendarService: CalendarService,
+    private loanProductsService: LoanProductsService
+  ) {}
 
   /**
    * Returns the group actions data.
@@ -30,17 +36,21 @@ export class GroupActionsResolver {
       case 'Attendance':
       case 'Manage Members':
       case 'Transfer Clients':
-        return this.groupsService.getGroupData(groupId);
+        return this.groupsService.delete11({ groupId: Number(groupId) });
       case 'Assign Staff':
-        return this.groupsService.getGroupData(groupId, 'true');
+        return this.loanProductsService.retrieveTemplate11({});
       case 'Close':
-        return this.groupsService.getGroupCommandTemplate('close');
+        return this.groupsService.retrieveTemplate7({ command: 'close' });
       case 'Attach Meeting':
-        return this.groupsService.getGroupCalendarTemplate(groupId);
+        return this.calendarService.retrieveNewCalendarDetails({ entityId: Number(groupId), entityType: '2' });
       case 'Edit Meeting':
       case 'Edit Meeting Schedule':
         const calendarId = route.queryParamMap.get('calendarId');
-        return this.groupsService.getGroupCalendarAndTemplate(groupId, calendarId);
+        return this.calendarService.retrieveCalendar({
+          entityId: Number(groupId),
+          calendarId: Number(calendarId),
+          entityType: '2'
+        });
       default:
         return undefined;
     }

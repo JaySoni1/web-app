@@ -10,7 +10,7 @@ import {
 import { Router, ActivatedRoute, RouterLink } from '@angular/router';
 
 /** Custom Services */
-import { GroupsService } from '../groups.service';
+import { GroupsService } from '@fineract/client';
 import { ClientService } from '@fineract/client';
 import { SettingsService } from 'app/settings/settings.service';
 import { Dates } from 'app/core/utils/dates';
@@ -144,7 +144,7 @@ export class CreateGroupComponent implements OnInit, AfterViewInit {
    */
   buildDependencies() {
     this.groupForm.get('officeId').valueChanges.subscribe((option: any) => {
-      this.groupService.getStaff(option).subscribe((data) => {
+      this.groupService.retrieveTemplate7(option).subscribe((data) => {
         this.staffData = data['staffOptions'];
         if (this.staffData === undefined) {
           this.groupForm.controls['staffId'].disable();
@@ -211,7 +211,7 @@ export class CreateGroupComponent implements OnInit, AfterViewInit {
     };
     data.clientMembers = [];
     this.clientMembers.forEach((client: any) => data.clientMembers.push(client.id));
-    this.groupService.createGroup(data).subscribe((response: any) => {
+    this.groupService.activateOrGenerateCollectionSheet(data).subscribe((response: any) => {
       this.router.navigate([
         '../groups',
         response.resourceId,
