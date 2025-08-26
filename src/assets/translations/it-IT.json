@@ -369,6 +369,7 @@
       "Create Group": "Creare un gruppo",
       "Create Holiday": "Crea vacanza",
       "Create Hook": "Crea gancio",
+      "Create Interest Refund": "Crea rimborso interessi",
       "Create Journal Entries": "Crea voci di diario",
       "Create Loan Product": "Crea prodotto di prestito",
       "Create Office": "Crea ufficio",
@@ -1164,7 +1165,14 @@
       "Grace On Principal": "Grace sul preside",
       "Insert Installment": "Inserisci rata",
       "Interest Rate": "Tasso di interesse",
-      "Principal Amount": "Importo principale"
+      "Principal Amount": "Importo principale",
+      "Buy Down Fees": "Commissioni di acquisto",
+      "Fee Amount": "Importo commissione",
+      "Amortized Amount": "Importo ammortizzato",
+      "Not Yet Amortized Amount": "Importo non ancora ammortizzato",
+      "Adjusted Amount": "Importo rettificato",
+      "Charged Off Amount": "Importo stornato",
+      "Date": "Data"
     },
     "inputs": {
       "accounting": {
@@ -1222,6 +1230,7 @@
       "Address Type": "Tipo di Indirizzo",
       "Adjust advance payments toward future installments": "Adeguare gli anticipi alle rate future",
       "Adjust interest rates for remainder of loan": "Adeguare i tassi di interesse per il resto del prestito",
+      "Adjustment Amount": "Importo di adeguamento",
       "Advance payments adjustment type": "Tipo di aggiustamento dei pagamenti anticipati",
       "Advanced Payment Allocation Transactions": "Transazioni di assegnazione anticipata dei pagamenti",
       "Advanced Payment Allocation Transaction Type": "Tipo di transazione di allocazione dei pagamenti avanzati",
@@ -1245,6 +1254,7 @@
       "Alt": "Alt",
       "Amortization": "Ammortamento",
       "Amortization Type": "Tipologia di ammortamento",
+      "Amortized Amount": "Importo ammortizzato",
       "Amount": "Quantità",
       "Amount Collected": "Importo riscosso",
       "Amount Paid": "Importo pagato",
@@ -2383,6 +2393,7 @@
       "Unassignment Date": "Data di revoca dell'assegnazione",
       "Unique": "Unico",
       "Unit Type": "Tipo di unità",
+      "Unrecognized Amount": "Importo non riconosciuto",
       "Updated By": "Aggiornato da",
       "Updated on": "Aggiornato il",
       "Url": "URL",
@@ -2482,12 +2493,15 @@
       "Income capitalization type": "Tipo di capitalizzazione del reddito",
       "DEFERRED INCOME RECOGNITION": "Rilevazione dei risconti passivi",
       "Enable Buy down fee": "Abilita commissione di buy down",
+      "Merchant Buy down fee": "Commissione di acquisto del commerciante",
       "Buy down fee calculation type": "Tipo di calcolo della commissione di buy down",
       "Buy down fee strategy": "Strategia per la commissione di buy down",
       "Buy down fee income type": "Tipo di ricavo da commissione di buy down",
       "Buy down fees": "Commissioni di acquisto",
       "Income from Buy down fees": "Proventi da commissioni di buy down",
-      "Buy down fee Expense": "Spese da commissioni di buy down"
+      "Buy down fee Expense": "Spese da commissioni di buy down",
+      "Skip Interest Refund Transaction Posting": "Salta la registrazione del rimborso degli interessi",
+      "Available Disbursement Amount (with Over Applied)": "Importo di disbrigo disponibile (con sovraapplicazione)"
     },
     "links": {
       "Community": "Comunità",
@@ -3298,12 +3312,16 @@
       "Mandatory": "Obbligatorio",
       "Voluntary": "Volontario",
       "Write a note": "Scrivi una nota",
-      "“Maker-Checker” principle requires every tasks": "Il principio “Maker-Checker” richiede che ogni attività venga completata da due persone per ridurre la possibilità di errori e usi impropri. Una persona avvia il processo e la seconda lo completa."
+      "“Maker-Checker” principle requires every tasks": "Il principio “Maker-Checker” richiede che ogni attività venga completata da due persone per ridurre la possibilità di errori e usi impropri. Una persona avvia il processo e la seconda lo completa.",
+      "Buy Down Fees": "Commissioni di acquisto"
     },
     "titles": {
       "Dashboard": "Pannello di controllo",
       "Home": "Casa",
       "Login": "Login"
+    },
+    "messages": {
+      "No Data Found": "Nessun dato trovato"
     }
   },
   "languages": {
@@ -3516,6 +3534,7 @@
     "Yes": "SÌ",
     "loan product will be active and available to clients": "La data in cui il prodotto di prestito sarà attivo e disponibile per i clienti. Se vuoto, il prodotto di prestito sarà attivo non appena verrà creato.",
     "loan product will become inactive and unavailable to clients": "La data in cui il prodotto di prestito diventerà inattivo e non disponibile per i clienti. Se vuoto, il prodotto caricato non diventerà mai inattivo.",
-    "Refund transactions where interest refund will automatically be calculated": "Transazioni di rimborso in cui il rimborso degli interessi verrà calcolato automaticamente"
+    "Refund transactions where interest refund will automatically be calculated": "Transazioni di rimborso in cui il rimborso degli interessi verrà calcolato automaticamente",
+    "Create Interest Refund": "Crea rimborso interessi"
   }
 }

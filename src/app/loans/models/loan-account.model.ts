@@ -8,6 +8,7 @@ export interface DelinquencyRange {
 
 export interface DelinquentData {
   availableDisbursementAmount: number;
+  availableDisbursementAmountWithOverApplied: number;
   pastDueDays: number;
   nextPaymentDueDate: number[];
   delinquentDays: number;
@@ -121,4 +122,27 @@ export interface DisbursementData {
   expectedDisbursementDate: Date;
   principal: number;
   id?: number;
+}
+
+export interface LoanDeferredIncomeData {
+  capitalizedIncomeData: LoanCapitalizedIncomeData[];
+}
+
+export interface LoanCapitalizedIncomeData {
+  amount: number;
+  amortizedAmount?: number;
+  unrecognizedAmount?: number;
+  amountAdjustment?: number;
+}
+
+export interface BuyDownFeeAmortizationDetails {
+  id: number;
+  loanId: number;
+  transactionId: number;
+  buyDownFeeDate: string;
+  buyDownFeeAmount: number;
+  amortizedAmount: number;
+  notYetAmortizedAmount: number;
+  adjustedAmount: number;
+  chargedOffAmount: number;
 }

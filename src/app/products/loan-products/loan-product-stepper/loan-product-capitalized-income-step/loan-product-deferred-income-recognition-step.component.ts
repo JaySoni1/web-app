@@ -1,19 +1,10 @@
-import { Component, EventEmitter, Input, OnChanges, Output, SimpleChanges } from '@angular/core';
-import {
-  UntypedFormBuilder,
-  UntypedFormControl,
-  UntypedFormGroup,
-  Validators,
-  ReactiveFormsModule
-} from '@angular/forms';
-import {
-  DeferredIncomeRecognition,
-  CapitalizedIncome,
-  BuyDownFee
-} from '../loan-product-payment-strategy-step/payment-allocation-model';
+import { Component, EventEmitter, Input, OnInit, Output } from '@angular/core';
+import { UntypedFormBuilder, UntypedFormControl, UntypedFormGroup, Validators } from '@angular/forms';
+import { DeferredIncomeRecognition } from '../loan-product-payment-strategy-step/payment-allocation-model';
 import { StringEnumOptionData } from 'app/shared/models/option-data.model';
 import { MatCheckbox } from '@angular/material/checkbox';
 import { STANDALONE_SHARED_IMPORTS } from 'app/standalone-shared.module';
+import { FaIconComponent } from '@fortawesome/angular-fontawesome';
 
 @Component({
   selector: 'mifosx-loan-product-capitalized-income-step',
@@ -21,10 +12,11 @@ import { STANDALONE_SHARED_IMPORTS } from 'app/standalone-shared.module';
   styleUrls: ['./loan-product-deferred-income-recognition-step.component.scss'],
   imports: [
     ...STANDALONE_SHARED_IMPORTS,
-    MatCheckbox
+    MatCheckbox,
+    FaIconComponent
   ]
 })
-export class LoanProductDeferredIncomeRecognitionStepComponent implements OnChanges {
+export class LoanProductDeferredIncomeRecognitionStepComponent implements OnInit {
   @Input() deferredIncomeRecognition: DeferredIncomeRecognition;
   @Input() capitalizedIncomeCalculationTypeOptions: StringEnumOptionData[];
   @Input() capitalizedIncomeStrategyOptions: StringEnumOptionData[];
@@ -38,7 +30,6 @@ export class LoanProductDeferredIncomeRecognitionStepComponent implements OnChan
   enableIncomeCapitalization: boolean;
   enableBuyDownFee: boolean;
 
-  @Output() setDeferredIncomeRecognition = new EventEmitter<DeferredIncomeRecognition>();
   @Output() setViewChildForm = new EventEmitter<UntypedFormGroup>();
 
   constructor(private formBuilder: UntypedFormBuilder) {
@@ -84,13 +75,15 @@ export class LoanProductDeferredIncomeRecognitionStepComponent implements OnChan
         this.deferredIncomeRecognition.buyDownFee.buyDownFeeIncomeType,
         Validators.required
       ]);
+      this.loanDeferredIncomeRecognitionForm.addControl('merchantBuyDownFee', [
+        this.deferredIncomeRecognition.buyDownFee.merchantBuyDownFee
+      ]);
     }
-    this.setViewChildForm.emit(this.loanDeferredIncomeRecognitionForm);
   }
 
-  ngOnChanges(changes: SimpleChanges): void {
+  ngOnInit(): void {
     this.enableIncomeCapitalization = this.deferredIncomeRecognition.capitalizedIncome
-      ? this.deferredIncomeRecognition.capitalizedIncome.enableIncomeCapitalization
+      ? this.deferredIncomeRecognition.capitalizedIncome?.enableIncomeCapitalization
       : false;
     this.enableBuyDownFee = this.deferredIncomeRecognition.buyDownFee
       ? this.deferredIncomeRecognition.buyDownFee.enableBuyDownFee
@@ -99,9 +92,9 @@ export class LoanProductDeferredIncomeRecognitionStepComponent implements OnChan
       this.loanDeferredIncomeRecognitionForm.patchValue({
         enableIncomeCapitalization: this.enableIncomeCapitalization,
         capitalizedIncomeCalculationType:
-          this.deferredIncomeRecognition.capitalizedIncome.capitalizedIncomeCalculationType,
-        capitalizedIncomeStrategy: this.deferredIncomeRecognition.capitalizedIncome.capitalizedIncomeStrategy,
-        capitalizedIncomeType: this.deferredIncomeRecognition.capitalizedIncome.capitalizedIncomeType
+          this.deferredIncomeRecognition.capitalizedIncome?.capitalizedIncomeCalculationType,
+        capitalizedIncomeStrategy: this.deferredIncomeRecognition.capitalizedIncome?.capitalizedIncomeStrategy,
+        capitalizedIncomeType: this.deferredIncomeRecognition.capitalizedIncome?.capitalizedIncomeType
       });
     }
     if (this.enableBuyDownFee) {
@@ -109,10 +102,10 @@ export class LoanProductDeferredIncomeRecognitionStepComponent implements OnChan
         enableBuyDownFee: this.enableBuyDownFee,
         buyDownFeeCalculationType: this.deferredIncomeRecognition.buyDownFee.buyDownFeeCalculationType,
         buyDownFeeStrategy: this.deferredIncomeRecognition.buyDownFee.buyDownFeeStrategy,
-        buyDownFeeIncomeType: this.deferredIncomeRecognition.buyDownFee.buyDownFeeIncomeType
+        buyDownFeeIncomeType: this.deferredIncomeRecognition.buyDownFee.buyDownFeeIncomeType,
+        merchantBuyDownFee: this.deferredIncomeRecognition.buyDownFee.merchantBuyDownFee
       });
     }
-    this.setViewChildForm.emit(this.loanDeferredIncomeRecognitionForm);
   }
 
   setConditionalControls() {
@@ -206,6 +199,10 @@ export class LoanProductDeferredIncomeRecognitionStepComponent implements OnChan
           'buyDownFeeIncomeType',
           new UntypedFormControl(buyDownFeeIncomeType, Validators.required)
         );
+        this.loanDeferredIncomeRecognitionForm.addControl(
+          'merchantBuyDownFee',
+          new UntypedFormControl(this.deferredIncomeRecognition.buyDownFee.merchantBuyDownFee)
+        );
 
         this.loanDeferredIncomeRecognitionForm
           .get('buyDownFeeCalculationType')
@@ -220,38 +217,21 @@ export class LoanProductDeferredIncomeRecognitionStepComponent implements OnChan
           .valueChanges.subscribe((newValue: string) => {
             this.emitValuesChange();
           });
+        this.loanDeferredIncomeRecognitionForm.get('merchantBuyDownFee').valueChanges.subscribe((newValue: boolean) => {
+          this.emitValuesChange();
+        });
       } else {
         this.loanDeferredIncomeRecognitionForm.removeControl('buyDownFeeCalculationType');
         this.loanDeferredIncomeRecognitionForm.removeControl('buyDownFeeStrategy');
         this.loanDeferredIncomeRecognitionForm.removeControl('buyDownFeeIncomeType');
+        this.loanDeferredIncomeRecognitionForm.removeControl('merchantBuyDownFee');
       }
 
       this.emitValuesChange();
-      this.setViewChildForm.emit(this.loanDeferredIncomeRecognitionForm);
     });
   }
 
   emitValuesChange(): void {
-    const capitalizedIncome: CapitalizedIncome = this.enableIncomeCapitalization
-      ? {
-          enableIncomeCapitalization: true,
-          capitalizedIncomeCalculationType:
-            this.loanDeferredIncomeRecognitionForm.value.capitalizedIncomeCalculationType,
-          capitalizedIncomeStrategy: this.loanDeferredIncomeRecognitionForm.value.capitalizedIncomeStrategy,
-          capitalizedIncomeType: this.loanDeferredIncomeRecognitionForm.value.capitalizedIncomeType
-        }
-      : { enableIncomeCapitalization: false };
-    const buyDownFee: BuyDownFee = this.enableBuyDownFee
-      ? {
-          enableBuyDownFee: true,
-          buyDownFeeCalculationType: this.loanDeferredIncomeRecognitionForm.value.buyDownFeeCalculationType,
-          buyDownFeeStrategy: this.loanDeferredIncomeRecognitionForm.value.buyDownFeeStrategy,
-          buyDownFeeIncomeType: this.loanDeferredIncomeRecognitionForm.value.buyDownFeeIncomeType
-        }
-      : { enableBuyDownFee: false };
-    this.setDeferredIncomeRecognition.emit({
-      capitalizedIncome: capitalizedIncome,
-      buyDownFee: buyDownFee
-    });
+    this.setViewChildForm.emit(this.loanDeferredIncomeRecognitionForm);
   }
 }

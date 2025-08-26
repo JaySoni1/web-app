@@ -15,7 +15,6 @@
     "ng": "ng",
     "build": "node version.js && npm run env -s && ng build --configuration production --output-hashing=none",
     "build:prod": "node version.js && node --max-old-space-size=16384 ./node_modules/@angular/cli/bin/ng build --configuration production --output-hashing=none --base-href=/web-app/",
-    "generate:fineract-client": "npx openapi-generator-cli generate -i ./fineract.yaml -g typescript-angular -o ./packages/fineract-clients --skip-validate-spec --additional-properties=usePromises=true,useSingleRequestParameter=true,npmName=@fineract/client,npmVersion=1.0.0",
     "start": "npm run env -s && ng serve --aot --proxy-config proxy.conf.js",
     "serve:dev": "npm run env -s && ng serve --source-map",
     "serve:sw": "npm run build -s && npx http-server ./dist -p 4200",
@@ -45,6 +44,7 @@
     "@angular/router": "19.2.14",
     "@ckeditor/ckeditor5-angular": "6.0.1",
     "@ckeditor/ckeditor5-build-classic": "40.2.0",
+    "@fineract/client": "^1.0.4",
     "@fortawesome/angular-fontawesome": "^1.0.0",
     "@fortawesome/fontawesome-free": "^6.7.2",
     "@fortawesome/fontawesome-svg-core": "6.2.1",
@@ -107,7 +107,6 @@
     "lint-staged": "^15.2.10",
     "prettier": "^3.3.3",
     "prettier-plugin-multiline-arrays": "^3.0.6",
-    "protractor": "~7.0.0",
     "puppeteer": "^24.4.0",
     "stylelint": "^16.10.0",
     "stylelint-config-recommended-scss": "^14.1.0",
@@ -138,8 +137,5 @@
       "archiver": "^7.0.1",
       "unzipper": "^0.12.3"
     }
-  },
-  "workspaces": [
-    "packages/*"
-  ]
+  }
 }

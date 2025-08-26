@@ -49,9 +49,14 @@ export class GroupsDataSource implements DataSource<any> {
       limit: limit
     };
     this.groupsService.retrieveAll24(requestParams).subscribe((groups: any) => {
-      groups.pageItems = groupActive ? groups.pageItems.filter((group: any) => group.active) : groups.pageItems;
-      this.recordsSubject.next(groups.totalFilteredRecords);
-      this.groupsSubject.next(groups.pageItems);
+      if (groups.pageItems) {
+        groups.pageItems = groupActive ? groups.pageItems.filter((group: any) => group.active) : groups.pageItems;
+        this.recordsSubject.next(groups.totalFilteredRecords);
+        this.groupsSubject.next(groups.pageItems);
+      } else {
+        this.recordsSubject.next(0);
+        this.groupsSubject.next([]);
+      }
     });
   }
 

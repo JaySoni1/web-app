@@ -70,5 +70,9 @@
         </mat-option>
       </mat-select>
     </mat-form-field>
+
+    <mat-checkbox class="flex-48" *ngIf="enableBuyDownFee" labelPosition="before" formControlName="merchantBuyDownFee">
+      {{ 'labels.inputs.Merchant Buy down fee' | translate }}
+    </mat-checkbox>
   </div>
 </form>

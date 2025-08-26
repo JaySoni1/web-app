@@ -1,4 +1,4 @@
-import { Component, Input, OnInit } from '@angular/core';
+import { Component, Input } from '@angular/core';
 import { MatStepperPrevious, MatStepperNext } from '@angular/material/stepper';
 import { FaIconComponent } from '@fortawesome/angular-fontawesome';
 import { STANDALONE_SHARED_IMPORTS } from 'app/standalone-shared.module';
@@ -9,8 +9,8 @@ import { STANDALONE_SHARED_IMPORTS } from 'app/standalone-shared.module';
   styleUrls: ['./stepper-buttons.component.scss'],
   imports: [
     ...STANDALONE_SHARED_IMPORTS,
-    MatStepperPrevious,
     FaIconComponent,
+    MatStepperPrevious,
     MatStepperNext
   ]
 })

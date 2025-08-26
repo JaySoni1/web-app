@@ -4,7 +4,7 @@ import { UntypedFormGroup, UntypedFormBuilder, Validators, UntypedFormControl } 
 import { ActivatedRoute, Router } from '@angular/router';
 
 /** Custom Services */
-import { LoansService } from 'app/loans/loans.service';
+import { LoanTransactionsService } from '@fineract/client';
 import { SettingsService } from 'app/settings/settings.service';
 import { Dates } from 'app/core/utils/dates';
 import { Currency } from 'app/shared/models/general.model';
@@ -47,16 +47,18 @@ export class MakeRepaymentComponent implements OnInit {
 
   command: string | null = null;
 
+  classificationOptions: any[] = [];
+
   /**
    * @param {FormBuilder} formBuilder Form Builder.
-   * @param {LoansService} loanService Loan Service.
+   * @param {LoanTransactionsService} loanTransactions Loan Transactions Service.
    * @param {ActivatedRoute} route Activated Route.
    * @param {Router} router Router for navigation.
    * @param {SettingsService} settingsService Settings Service
    */
   constructor(
     private formBuilder: UntypedFormBuilder,
-    private loanService: LoansService,
+    private loanTransactions: LoanTransactionsService,
     private route: ActivatedRoute,
     private router: Router,
     private dateUtils: Dates,
@@ -92,7 +94,8 @@ export class MakeRepaymentComponent implements OnInit {
       ],
       externalId: '',
       paymentTypeId: '',
-      note: ''
+      note: '',
+      skipInterestRefund: [false]
     });
 
     if (this.isCapitalizedIncome()) {
@@ -103,6 +106,7 @@ export class MakeRepaymentComponent implements OnInit {
           Validators.min(0.001),
           Validators.max(this.dataObject.amount)])
       );
+      this.repaymentLoanForm.addControl('classificationId', new UntypedFormControl(''));
     } else {
       this.repaymentLoanForm.addControl(
         'transactionAmount',
@@ -115,6 +119,7 @@ export class MakeRepaymentComponent implements OnInit {
 
   setRepaymentLoanDetails() {
     this.paymentTypes = this.dataObject.paymentTypeOptions;
+    this.classificationOptions = this.dataObject.classificationOptions;
     this.repaymentLoanForm.patchValue({
       transactionAmount: this.dataObject.amount
     });
@@ -157,6 +162,11 @@ export class MakeRepaymentComponent implements OnInit {
     ].includes(this.command);
   }
 
+  showInterestRefundCheckbox(): boolean {
+    const code = this.dataObject?.type?.code?.toLowerCase() || '';
+    return code.includes('merchantissuedrefund') || code.includes('payoutrefund');
+  }
+
   /** Submits the repayment form */
   submit() {
     const repaymentLoanFormData = this.repaymentLoanForm.value;
@@ -166,14 +176,24 @@ export class MakeRepaymentComponent implements OnInit {
     if (repaymentLoanFormData.transactionDate instanceof Date) {
       repaymentLoanFormData.transactionDate = this.dateUtils.formatDate(prevTransactionDate, dateFormat);
     }
-    const data = {
+    const data: any = {
       ...repaymentLoanFormData,
       dateFormat,
       locale
     };
     data['transactionAmount'] = data['transactionAmount'] * 1;
-    this.loanService.submitLoanActionButton(this.loanId, data, this.command).subscribe((response: any) => {
-      this.router.navigate(['../../transactions'], { relativeTo: this.route });
-    });
+    if (repaymentLoanFormData.skipInterestRefund) {
+      data.interestRefundCalculation = false;
+    }
+    delete data.skipInterestRefund;
+    this.loanTransactions
+      .executeLoanTransaction({
+        loanId: Number(this.loanId),
+        command: this.command,
+        ...data
+      })
+      .subscribe((response: any) => {
+        this.router.navigate(['../../transactions'], { relativeTo: this.route });
+      });
   }
 }

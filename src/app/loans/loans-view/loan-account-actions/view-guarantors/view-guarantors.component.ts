@@ -3,9 +3,7 @@ import { Component, OnInit, Input } from '@angular/core';
 import { FormGroup, FormBuilder, Validators, FormControl } from '@angular/forms';
 import { ActivatedRoute, Router } from '@angular/router';
 import { MatDialog } from '@angular/material/dialog';
-
-/** Custom Services */
-import { LoansService } from 'app/loans/loans.service';
+import { GuarantorsService, LoansService } from '@fineract/client';
 
 /** Dialog Components */
 import { DeleteDialogComponent } from 'app/shared/delete-dialog/delete-dialog.component';
@@ -72,12 +70,14 @@ export class ViewGuarantorsComponent implements OnInit {
   /** View and perform various action on existing list of guarantors
    * @param {MatDialog} dialog Dialog
    * @param {LoansService} loansService Loans Service
+   * @param {GuarantorsService} guarantorsService Guarantors Service
    * @param {route} Route Route
    * @param {router} Router Router
    */
   constructor(
     public dialog: MatDialog,
-    public loansService: LoansService,
+    private guarantorsService: GuarantorsService,
+    private loansService: LoansService,
     private route: ActivatedRoute,
     private router: Router
   ) {
@@ -86,6 +86,19 @@ export class ViewGuarantorsComponent implements OnInit {
 
   ngOnInit() {
     this.guarantorDetails = this.dataObject.guarantors;
+
+    // Get delinquency data for available disbursement amount with over applied
+    this.loansService.retrieveLoan(this.loanId).subscribe((delinquencyData: any) => {
+      // Check if the field is at root level
+      if (delinquencyData.availableDisbursementAmountWithOverApplied !== undefined) {
+        this.dataObject.availableDisbursementAmountWithOverApplied =
+          delinquencyData.availableDisbursementAmountWithOverApplied;
+      }
+      // Also check if it's in delinquent object
+      if (delinquencyData.delinquent) {
+        this.dataObject.delinquent = delinquencyData.delinquent;
+      }
+    });
   }
 
   toggleGuarantorsDetailsOverview() {
@@ -98,9 +111,14 @@ export class ViewGuarantorsComponent implements OnInit {
     });
     deleteGuarantorDialogRef.afterClosed().subscribe((response: any) => {
       if (response.delete) {
-        this.loansService.deleteGuarantor(this.loanId, id).subscribe(() => {
-          this.reload();
-        });
+        this.guarantorsService
+          .deleteGuarantor({
+            loanId: Number(this.loanId),
+            guarantorId: Number(id)
+          })
+          .subscribe(() => {
+            this.reload();
+          });
       }
     });
   }

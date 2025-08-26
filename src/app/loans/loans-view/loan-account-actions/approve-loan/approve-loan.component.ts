@@ -5,12 +5,14 @@ import { ActivatedRoute, Router, RouterLink } from '@angular/router';
 import { Dates } from 'app/core/utils/dates';
 
 /** Custom Services. */
-import { LoansService } from 'app/loans/loans.service';
+import { LoansService } from '@fineract/client';
 import { SettingsService } from 'app/settings/settings.service';
 import { Currency } from 'app/shared/models/general.model';
 import { InputAmountComponent } from '../../../../shared/input-amount/input-amount.component';
 import { CdkTextareaAutosize } from '@angular/cdk/text-field';
+import { FormatNumberPipe } from '../../../../pipes/format-number.pipe';
 import { STANDALONE_SHARED_IMPORTS } from 'app/standalone-shared.module';
+import { MatIcon } from '@angular/material/icon';
 
 /**
  * Approve Loan component.
@@ -22,7 +24,9 @@ import { STANDALONE_SHARED_IMPORTS } from 'app/standalone-shared.module';
   imports: [
     ...STANDALONE_SHARED_IMPORTS,
     InputAmountComponent,
-    CdkTextareaAutosize
+    CdkTextareaAutosize,
+    FormatNumberPipe,
+    MatIcon
   ]
 })
 export class ApproveLoanComponent implements OnInit {
@@ -64,11 +68,29 @@ export class ApproveLoanComponent implements OnInit {
 
   ngOnInit() {
     this.setApproveLoanForm();
-    this.loanService.getApproveAssociationsDetails(this.loanId).subscribe((response: any) => {
-      this.associationData = response;
-      this.approveLoanForm.patchValue({
-        expectedDisbursementDate: new Date(response.timeline.expectedDisbursementDate)
+    this.loanService
+      .retrieveLoan({
+        loanId: Number(this.loanId),
+        associations: 'multiDisburseDetails'
+      })
+      .subscribe((response: any) => {
+        this.associationData = response;
+        this.approveLoanForm.patchValue({
+          expectedDisbursementDate: new Date(response.timeline.expectedDisbursementDate)
+        });
       });
+
+    // Get delinquency data for available disbursement amount with over applied
+    this.loanService.retrieveLoan(this.loanId).subscribe((delinquencyData: any) => {
+      // Check if the field is at root level
+      if (delinquencyData.availableDisbursementAmountWithOverApplied !== undefined) {
+        this.loanData.availableDisbursementAmountWithOverApplied =
+          delinquencyData.availableDisbursementAmountWithOverApplied;
+      }
+      // Also check if it's in delinquent object
+      if (delinquencyData.delinquent) {
+        this.loanData.delinquent = delinquencyData.delinquent;
+      }
     });
   }
 
@@ -110,8 +132,14 @@ export class ApproveLoanComponent implements OnInit {
       dateFormat,
       locale
     };
-    this.loanService.loanActionButtons(this.loanId, 'approve', data).subscribe((response: any) => {
-      this.router.navigate(['../../general'], { relativeTo: this.route });
-    });
+    this.loanService
+      .stateTransitions({
+        loanId: Number(this.loanId),
+        postLoansLoanIdRequest: data,
+        command: 'approve'
+      })
+      .subscribe((response: any) => {
+        this.router.navigate(['../../general'], { relativeTo: this.route });
+      });
   }
 }

@@ -369,6 +369,7 @@
       "Create Group": "그룹 만들기",
       "Create Holiday": "공휴일 만들기",
       "Create Hook": "후크 생성",
+      "Create Interest Refund": "이자 환불 생성",
       "Create Journal Entries": "분개 항목 만들기",
       "Create Loan Product": "대출상품 생성",
       "Create Office": "사무실 만들기",
@@ -1165,7 +1166,14 @@
       "Grace On Principal": "그레이스 온 교장",
       "Insert Installment": "할부 삽입",
       "Interest Rate": "이자율",
-      "Principal Amount": "원금"
+      "Principal Amount": "원금",
+      "Buy Down Fees": "매입 수수료",
+      "Fee Amount": "수수료 금액",
+      "Amortized Amount": "상각 금액",
+      "Not Yet Amortized Amount": "Not Yet Amortized Amount",
+      "Adjusted Amount": "조정된 금액",
+      "Charged Off Amount": "상각 금액",
+      "Date": "날짜"
     },
     "inputs": {
       "accounting": {
@@ -1223,6 +1231,7 @@
       "Address Type": "주소 유형",
       "Adjust advance payments toward future installments": "향후 할부에 대한 선불금 조정",
       "Adjust interest rates for remainder of loan": "남은 대출금에 대한 이자율 조정",
+      "Adjustment Amount": "조정 금액",
       "Advance payments adjustment type": "선지급 조정 유형",
       "Advanced Payment Allocation Transactions": "선지급 할당 거래",
       "Advanced Payment Allocation Transaction Type": "고급 지불 할당 거래 유형",
@@ -1246,6 +1255,7 @@
       "Alt": "Alt",
       "Amortization": "상각",
       "Amortization Type": "상각 유형",
+      "Amortized Amount": "상각 금액",
       "Amount": "양",
       "Amount Collected": "수집금액",
       "Amount Paid": "금액 지급",
@@ -2384,6 +2394,7 @@
       "Unassignment Date": "할당 취소 날짜",
       "Unique": "고유한",
       "Unit Type": "단위 유형",
+      "Unrecognized Amount": "인식되지 않은 금액",
       "Updated By": "업데이트한 사람",
       "Updated on": "업데이트 날짜",
       "Url": "URL",
@@ -2483,12 +2494,15 @@
       "Income capitalization type": "소득 자본화 유형",
       "DEFERRED INCOME RECOGNITION": "이연수익 인식",
       "Enable Buy down fee": "매수 수수료 활성화",
+      "Merchant Buy down fee": "상인 구매 선불 수수료",
       "Buy down fee calculation type": "매수 수수료 계산 유형",
       "Buy down fee strategy": "매수 수수료 전략",
       "Buy down fee income type": "매수 수수료 수익 유형",
       "Buy down fees": "매수 수수료",
       "Income from Buy down fees": "매입 수수료 수입",
-      "Buy down fee Expense": "매입 수수료 비용"
+      "Buy down fee Expense": "매입 수수료 비용",
+      "Skip Interest Refund Transaction Posting": "이자 환불 거래 게시 건너뛰기",
+      "Available Disbursement Amount (with Over Applied)": "초과 적용 금액을 포함한 사용 가능한 지급 금액"
     },
     "links": {
       "Community": "지역 사회",
@@ -3298,12 +3312,16 @@
       "Mandatory": "필수적인",
       "Voluntary": "자발적인",
       "Write a note": "메모 쓰기",
-      "“Maker-Checker” principle requires every tasks": "\"Maker-Checker\" 원칙은 오류와 오용 가능성을 줄이기 위해 모든 작업을 두 사람이 완료하도록 요구합니다. 한 사람이 프로세스를 시작하고 두 번째 사람이 프로세스를 완료합니다."
+      "“Maker-Checker” principle requires every tasks": "\"Maker-Checker\" 원칙은 오류와 오용 가능성을 줄이기 위해 모든 작업을 두 사람이 완료하도록 요구합니다. 한 사람이 프로세스를 시작하고 두 번째 사람이 프로세스를 완료합니다.",
+      "Buy Down Fees": "매입 수수료"
     },
     "titles": {
       "Dashboard": "계기반",
       "Home": "집",
       "Login": "로그인"
+    },
+    "messages": {
+      "No Data Found": "데이터를 찾을 수 없음"
     }
   },
   "languages": {
@@ -3516,6 +3534,7 @@
     "Yes": "예",
     "loan product will be active and available to clients": "대출 상품이 활성화되어 고객에게 제공되는 날짜입니다. 비어 있으면 대출 상품이 생성되자마자 활성화됩니다.",
     "loan product will become inactive and unavailable to clients": "대출 상품이 비활성화되어 고객이 사용할 수 없게 되는 날짜입니다. 비어 있으면 로드 제품이 비활성화되지 않습니다.",
-    "Refund transactions where interest refund will automatically be calculated": "이자 환불이 자동으로 계산되는 환불 거래"
+    "Refund transactions where interest refund will automatically be calculated": "이자 환불이 자동으로 계산되는 환불 거래",
+    "Create Interest Refund": "이자 환불 생성"
   }
 }
