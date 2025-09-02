@@ -1,5 +1,5 @@
 /** Angular Imports */
-import { Component, OnInit } from '@angular/core';
+import { Component } from '@angular/core';
 import { ActivatedRoute, Router, RouterLink, RouterLinkActive, RouterOutlet } from '@angular/router';
 import { DomSanitizer } from '@angular/platform-browser';
 import { MatDialog } from '@angular/material/dialog';
@@ -34,6 +34,7 @@ import { FaIconComponent } from '@fortawesome/angular-fontawesome';
 import { AccountNumberComponent } from '../../shared/account-number/account-number.component';
 import { ExternalIdentifierComponent } from '../../shared/external-identifier/external-identifier.component';
 import { MatTabNav, MatTabLink, MatTabNavPanel } from '@angular/material/tabs';
+import { MatProgressSpinner } from '@angular/material/progress-spinner';
 import { StatusLookupPipe } from '../../pipes/status-lookup.pipe';
 import { DateFormatPipe } from '../../pipes/date-format.pipe';
 import { STANDALONE_SHARED_IMPORTS } from 'app/standalone-shared.module';
@@ -69,11 +70,16 @@ import { STANDALONE_SHARED_IMPORTS } from 'app/standalone-shared.module';
     DateFormatPipe
   ]
 })
-export class ClientsViewComponent implements OnInit {
-  clientViewData: any;
+export class ClientsViewComponent {
+  clientViewData: any = {
+    status: { code: '', value: '' },
+    displayName: '',
+    id: null
+  };
   clientDatatables: any;
   clientImage: any;
   clientTemplateData: any;
+  isDataLoaded = false;
 
   constructor(
     private route: ActivatedRoute,
@@ -84,24 +90,62 @@ export class ClientsViewComponent implements OnInit {
     private _sanitizer: DomSanitizer,
     public dialog: MatDialog
   ) {
-    this.route.data.subscribe((data: { clientViewData: any; clientTemplateData: any; clientDatatables: any }) => {
-      this.clientViewData = data.clientViewData;
-      this.clientDatatables = data.clientDatatables;
-      this.clientTemplateData = data.clientTemplateData;
-    });
+    console.log('ClientsViewComponent constructor called');
+    try {
+      this.route.data.subscribe({
+        next: (data: { clientViewData: any; clientTemplateData: any; clientDatatables: any }) => {
+          if (data && data.clientViewData && data.clientViewData.id) {
+            this.clientViewData = data.clientViewData;
+            this.clientDatatables = data.clientDatatables;
+            this.clientTemplateData = data.clientTemplateData;
+            this.isDataLoaded = true;
+            console.log('Client data loaded successfully with ID:', this.clientViewData.id);
+          } else {
+            console.warn('Invalid or missing client data in route resolver:', data);
+          }
+        },
+        error: (error: any) => {
+          console.error('Error in route data subscription:', error);
+          this.isDataLoaded = false;
+        }
+      });
+    } catch (error) {
+      console.error('Error in constructor:', error);
+    }
   }
 
-  ngOnInit() {
+  private loadClientImage() {
+    // Additional safety check before making the API call
+    if (
+      !this.clientViewData ||
+      !this.clientViewData.id ||
+      this.clientViewData.id === null ||
+      this.clientViewData.id === undefined ||
+      typeof this.clientViewData.id !== 'number' ||
+      this.clientViewData.id <= 0
+    ) {
+      console.warn('Cannot load client image: clientId is invalid or missing', this.clientViewData?.id);
+      return;
+    }
+
+    console.log('Loading client image for ID:', this.clientViewData.id);
     this.selfClientService.retrieveImage1(this.clientViewData.id).subscribe(
       (base64Image: any) => {
         this.clientImage = this._sanitizer.bypassSecurityTrustResourceUrl(base64Image);
       },
-      (error: any) => {}
+      (error: any) => {
+        console.warn('Failed to load client image:', error);
+      }
     );
   }
 
   isActive(): boolean {
-    return this.clientViewData.status.value === 'Active';
+    return (
+      this.isDataLoaded &&
+      this.clientViewData &&
+      this.clientViewData.status &&
+      this.clientViewData.status.value === 'Active'
+    );
   }
 
   /**
@@ -109,6 +153,11 @@ export class ClientsViewComponent implements OnInit {
    * @param {string} name action name.
    */
   doAction(name: string) {
+    if (!this.isDataLoaded || !this.clientViewData || !this.clientViewData.id) {
+      console.warn('Cannot perform action: client data is not loaded');
+      return;
+    }
+
     switch (name) {
       case 'Assign Staff':
       case 'Close':
@@ -325,6 +374,11 @@ export class ClientsViewComponent implements OnInit {
    * Captures clients profile image.
    */
   private captureProfileImage() {
+    if (!this.clientViewData || !this.clientViewData.id) {
+      console.warn('Cannot capture profile image: client data is not available');
+      return;
+    }
+
     const captureImageDialogRef = this.dialog.open(CaptureImageDialogComponent);
     captureImageDialogRef.afterClosed().subscribe((imageURL: string) => {
       if (imageURL) {
@@ -346,6 +400,11 @@ export class ClientsViewComponent implements OnInit {
    * Uploads the clients image.
    */
   private uploadProfileImage() {
+    if (!this.clientViewData || !this.clientViewData.id) {
+      console.warn('Cannot upload profile image: client data is not available');
+      return;
+    }
+
     const uploadImageDialogRef = this.dialog.open(UploadImageDialogComponent);
     uploadImageDialogRef.afterClosed().subscribe((image: File) => {
       if (image) {
@@ -366,6 +425,11 @@ export class ClientsViewComponent implements OnInit {
    * Deletes the client image.
    */
   private deleteProfileImage() {
+    if (!this.clientViewData || !this.clientViewData.id || !this.clientViewData.displayName) {
+      console.warn('Cannot delete profile image: client data is not available');
+      return;
+    }
+
     const deleteClientImageDialogRef = this.dialog.open(DeleteDialogComponent, {
       data: { deleteContext: `the profile image of ${this.clientViewData.displayName}` }
     });
