@@ -62,7 +62,13 @@ export class ShareProductSettingsStepComponent implements OnInit {
       maximumShares: [''],
       minimumActivePeriodForDividends: [''],
       minimumactiveperiodFrequencyType: [''],
-      lockinPeriodFrequency: [''],
+      lockinPeriodFrequency: [
+        '',
+        [
+          Validators.required,
+          Validators.min(1)
+        ]
+      ],
       lockinPeriodFrequencyType: [''],
       allowDividendCalculationForInactiveClients: [false]
     });
