@@ -1,5 +1,5 @@
 {
-  "APP_NAME": "Mifos X",
+  "APP_NAME": "Mifos® X",
   "Logged in as": "Conectado como",
   "Remember me": "Recordar me",
   "errors": {
@@ -505,6 +505,7 @@
       "Select All": "Seleccionar todo",
       "Show more": "Mostrar más",
       "Show less": "Muestra menos",
+      "Signing in...": "Iniciando sesión",
       "Staff": "Asesor",
       "Staff Assignment History": "Historial de asignaciones de asesor",
       "Subledger Account": "Cuenta auxiliar",
@@ -934,7 +935,7 @@
       "Configure Maker Checker Tasks": "Configurar tareas de Realizador Aprobador",
       "Configure Maker-Checker Tasks": "Configurar tareas de Realizador Aprobador",
       "Customer Attributes": "Atributos personalizados",
-      "Configure Mifos Organization Needs": "La siguiente guía le ayudará a configurar Mifos según las necesidades de su organización.",
+      "Configure Mifos Organization Needs": "La siguiente guía le ayudará a configurar Mifos® según las necesidades de su organización.",
       "Create Charge": "Crear Comisión",
       "Create Closure": "Crear Cierre",
       "Create Code": "Crear Código",
@@ -1038,7 +1039,7 @@
       "Keyboard Shortcuts": "Atajos de teclado",
       "Last Active": "Último Activo",
       "Liabilities": "Pasivo",
-      "List of all codes in the Mifos system": "Lista de todos los códigos del sistema Mifos para su organización.",
+      "List of all codes in the Mifos system": "Lista de todos los códigos del sistema Mifos® para su organización.",
       "List of all currently available data tables": "Lista de todas las tablas de datos disponibles actualmente.",
       "List of all currently available reports": "Lista de todos los reportes disponibles actualmente. Para más detalles haga clic",
       "List of all maker checker tasks": "Lista de todas las tareas para Realizador Aprobador. Para más detalles haga clic",
@@ -1218,7 +1219,7 @@
       "View Client Signature": "Ver firma del cliente",
       "View Journal Entry": "Ver entrada de diario",
       "Waive Charge": "Renunciar a Comisión",
-      "Welcome to Mifos": "Bienvenido a Mifos",
+      "Welcome to Mifos": "Bienvenido a Mifos®",
       "WriteOff reasons to Expense accounts": "Razones de cancelación de cuentas de gastos",
       "Withdraw Money From Saving Account": "Retirar dinero de una cuenta de ahorro",
       "Withhold Tax": "Retener el impuesto",
@@ -1243,7 +1244,10 @@
       "Not Yet Amortized Amount": "Monto aun no amortizado",
       "Adjusted Amount": "Importe ajustado",
       "Charged Off Amount": "Importe cancelado",
-      "Date": "Fecha"
+      "Date": "Fecha",
+      "Secure & Reliable": "Seguro y Confiable",
+      "Community Driven": "Impulsado por la Comunidad",
+      "Global Impact": "Impacto Global"
     },
     "inputs": {
       "accounting": {
@@ -2724,7 +2728,9 @@
     },
     "placeholders": {
       "Add new server": "Agregar nuevo servidor",
-      "Search Activity": "Actividad de búsqueda"
+      "Search Activity": "Actividad de búsqueda",
+      "Enter your username": "Ingrese su nombre de usuario",
+      "Enter your password": "Ingrese su contraseña"
     },
     "status": {
       "Active": "Activo",
@@ -2912,7 +2918,6 @@
       "Create Recurring Deposits Account": "Crear cuenta de depósitos recurrentes",
       "Create Report": "Crear reporte",
       "Create SMS Campaign": "Crear campaña de SMS",
-      "Create Savings Product": "Crear producto de ahorro",
       "Create Savings Account": "Crear Cuenta de Ahorros",
       "Create Self Service User": "Crear usuario de autoservicio",
       "Create Share Product": "Crear producto de Acciones",
@@ -3058,7 +3063,7 @@
       "Fixed Deposit Account Charges": "Comisiones de cuenta de Depósito Fijo",
       "Filter by name": "Filtrar por nombre",
       "FilterByLoanIdOrError": "Filtrar por ID de préstamo o error",
-      "Fineract": "Fineract",
+      "Fineract": "Apache Fineract®",
       "Fixed Deposit Account Interest Rate Chart": "Tabla de tasas de interés de cuentas de Depósito Fijo",
       "Fixed Deposit Account Standing Instructions": "Instrucciones para la situación de la cuenta de Depósito Fijo",
       "Fixed Deposit Account Transactions": "Transacciones de cuenta de Depósito Fijo",
@@ -3158,7 +3163,7 @@
       "Manage your Services": "Gestiona tus servicios",
       "Manual journal entry transactions recorded in a journal": "Transacciones de asiento de diario manuales registradas en un diario",
       "Message Gateway": "Puerta de enlace de mensajes",
-      "Mifos Initiative": "Iniciativa Mifos",
+      "Mifos Initiative": "Iniciativa Mifos®",
       "Mifos X data-tables allow the user to add custom fields": "Las tablas de datos de Mifos X permiten al usuario agregar campos personalizados además de los campos integrados a un perfil de cliente, cuenta de Crédito/ahorro, grupo, centro u oficina.",
       "Migrate Opening Balances": "Migrar saldos de apertura",
       "Modify Loans Account": "Modificar cuenta de Créditos",

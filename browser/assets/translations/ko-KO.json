@@ -1,5 +1,5 @@
 {
-  "APP_NAME": "Mifos X",
+  "APP_NAME": "Mifos® X",
   "Logged in as": "다음 계정으로 로그인됨",
   "Remember me": "날 기억해",
   "errors": {
@@ -505,6 +505,7 @@
       "Select All": "모두 선택",
       "Show more": "자세히보기",
       "Show less": "간략히 보기",
+      "Signing in...": "로그인",
       "Staff": "직원",
       "Staff Assignment History": "직원 배정 내역",
       "Subledger Account": "보조원장 계정",
@@ -935,7 +936,7 @@
       "Configure Maker Checker Tasks": "Maker Checker 작업 구성",
       "Configure Maker-Checker Tasks": "Maker-Checker 작업 구성",
       "Customer Attributes": "고객 속성",
-      "Configure Mifos Organization Needs": "다음 가이드 투어는 조직의 필요에 따라 Mifos를 구성하는 데 도움이 됩니다.",
+      "Configure Mifos Organization Needs": "다음 가이드 투어는 조직의 필요에 따라 Mifos®를 구성하는 데 도움이 됩니다.",
       "Create Charge": "청구 생성",
       "Create Closure": "클로저 생성",
       "Create Code": "코드 생성",
@@ -1038,7 +1039,7 @@
       "Keyboard Shortcuts": "키보드 단축키",
       "Last Active": "마지막 활성",
       "Liabilities": "부채",
-      "List of all codes in the Mifos system": "귀하의 조직에 대한 Mifos 시스템의 모든 코드 목록입니다.",
+      "List of all codes in the Mifos system": "귀하의 조직에 대한 Mifos® 시스템의 모든 코드 목록입니다.",
       "List of all currently available data tables": "현재 사용 가능한 모든 데이터 테이블 목록입니다.",
       "List of all currently available reports": "현재 사용 가능한 모든 보고서 목록입니다. 자세한 내용을 보려면 클릭하세요.",
       "List of all maker checker tasks": "모든 Maker Checker 작업 목록입니다. 자세한 내용을 보려면 클릭하세요.",
@@ -1219,7 +1220,7 @@
       "View Client Signature": "클라이언트 서명 보기",
       "View Journal Entry": "분개 항목 보기",
       "Waive Charge": "요금 면제",
-      "Welcome to Mifos": "미포스에 오신 것을 환영합니다",
+      "Welcome to Mifos": "Mifos®에 오신 것을 환영합니다",
       "WriteOff reasons to Expense accounts": "비용 계정에 대한 WriteOff 이유",
       "Withdraw Money From Saving Account": "저축 계좌에서 돈을 인출하세요",
       "Withhold Tax": "원천징수세",
@@ -1244,7 +1245,10 @@
       "Not Yet Amortized Amount": "Not Yet Amortized Amount",
       "Adjusted Amount": "조정된 금액",
       "Charged Off Amount": "상각 금액",
-      "Date": "날짜"
+      "Date": "날짜",
+      "Secure & Reliable": "안전하고 신뢰할 수 있음",
+      "Community Driven": "커뮤니티 주도형",
+      "Global Impact": "글로벌 영향"
     },
     "inputs": {
       "accounting": {
@@ -2723,7 +2727,9 @@
     },
     "placeholders": {
       "Add new server": "새 서버 추가",
-      "Search Activity": "검색 활동"
+      "Search Activity": "검색 활동",
+      "Enter your username": "사용자 이름을 입력하세요",
+      "Enter your password": "비밀번호를 입력하세요"
     },
     "status": {
       "Active": "활동적인",
@@ -2911,7 +2917,6 @@
       "Create Recurring Deposits Account": "정기예금 계좌 생성",
       "Create Report": "보고서 작성",
       "Create SMS Campaign": "SMS 캠페인 생성",
-      "Create Savings Product": "저장상품 생성",
       "Create Savings Account": "저축 계좌 만들기",
       "Create Self Service User": "셀프 서비스 사용자 생성",
       "Create Share Product": "공유상품 생성",
@@ -3056,7 +3061,7 @@
       "Financial Activity Mappings": "재무 활동 매핑",
       "Filter by name": "이름 별 필터",
       "FilterByLoanIdOrError": "대출 ID 또는 오류로 필터링",
-      "Fineract": "미세한",
+      "Apache Fineract Core": "Apache Fineract®(아파치 파이너랙트 코어)",
       "Fixed Deposit Account Charges": "정기예금 계좌 수수료",
       "Fixed Deposit Account Interest Rate Chart": "정기예금 이자율 차트",
       "Fixed Deposit Account Standing Instructions": "정기예금 계좌 예금 안내",
@@ -3157,7 +3162,7 @@
       "Manage your Services": "서비스 관리",
       "Manual journal entry transactions recorded in a journal": "분개장에 기록된 수동 분개 거래",
       "Message Gateway": "메시지 게이트웨이",
-      "Mifos Initiative": "미포스 이니셔티브",
+      "Mifos Initiative": "Mifos® 이니셔티브",
       "Mifos X data-tables allow the user to add custom fields": "Mifos X 데이터 테이블을 사용하면 사용자는 클라이언트 프로필, 대출/저축 계좌, 그룹, 센터 또는 사무실에 기본 제공 필드 외에 사용자 정의 필드를 추가할 수 있습니다.",
       "Migrate Opening Balances": "개방 잔액을 마이그레이션합니다",
       "Modify Loans Account": "대출 계정 수정",
