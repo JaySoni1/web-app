@@ -307,7 +307,8 @@
       }
     },
     "breadcrumbs": {
-      "Home": "Home"
+      "Home": "Home",
+      "Account Transfers": "Account Transfers"
     },
     "buttons": {
       "Accept Transfer": "Accept Transfer",
@@ -867,9 +868,13 @@
       "Password validation": "The password should contain a minimum of {{minchar}} characters, including 1 uppercase, 1 lowercase and a special character and should not include repeated characters or spaces.",
       "Must be at least": "Must be at least",
       "Must be less or equal to": "Must be less or equal to",
-      "must be after or equal to start date": "must be after or equal to start date"
+      "must be after or equal to start date": "must be after or equal to start date",
+      "Yes": "Yes",
+      "No": "No",
+      "No classification data available": "No classification data available"
     },
     "passwordPreferences": {
+      "Password most be at least 1 character and not more that 50 characters long": "Password must be at least 1 character and not more than 50 characters long",
       "Password must be at least 1 character and not more than 50 characters long": "Password must be at least 1 character and not more than 50 characters long",
       "Password must be at least 6 characters, no more than 50 characters long, must include at least one upper case letter, one lower case letter, one numeric digit and no space": "Password must be at least 6 characters, no more than 50 characters long, must include at least one upper case letter, one lower case letter, one numeric digit and no space",
       "Password must be 12 to 50 characters long, containing at least one uppercase letter, one lowercase letter, one numeric digit, and one special character, with no spaces or consecutive repeating characters": "Password must be 12 to 50 characters long, containing at least one uppercase letter, one lowercase letter, one numeric digit, and one special character, with no spaces or consecutive repeating characters"
@@ -1001,6 +1006,14 @@
       "External Services": "External Services",
       "Family Member": "Family Member",
       "Family Members": "Family Members",
+      "Personal Information": "Personal Information",
+      "Entity Details": "Entity Details",
+      "Contact Information": "Contact Information",
+      "Account Information": "Account Information",
+      "Group Membership": "Group Membership",
+      "Classification": "Classification",
+      "Important Dates": "Important Dates",
+      "Status": "Status",
       "Fees to Specific Income Accounts": "Fees to Specific Income Accounts",
       "Filter holidays": "Search bar to filter holidays based on different offices.",
       "Filter reports by name": "Search bar to filter reports by name.",
@@ -1267,6 +1280,9 @@
         "INCOME": "INCOME",
         "EXPENSE": "EXPENSE"
       },
+      "Basic": "Basic",
+      "Standard": "Standard",
+      "Strong": "Strong",
       "Percentage is required": "Percentage is required",
       "ACCOUNTING": "ACCOUNTING",
       "ADDRESS": "ADDRESS",
@@ -1468,6 +1484,8 @@
       "Client Screen Reports": "Client Screen Reports",
       "Client Trends": "Client Trends",
       "Client Type": "Client Type",
+      "Client Status": "Client Status",
+      "Sub Status": "Sub Status",
       "Client first name": "Client first name",
       "Client last name": "Client last name",
       "Client middle name": "Client middle name",
@@ -1771,6 +1789,7 @@
       "Gap between Installments": "Gap between Installments:(Min",
       "Gender": "Gender",
       "General": "General",
+      "Personal Data": "Personal Data",
       "Generate Repayment Schedule": "Generate Repayment Schedule",
       "Global Configurations": "Global Configurations",
       "Goodwill credit": "Goodwill credit",
@@ -2819,6 +2838,7 @@
       "Add, modify or inactivate a Fixed deposit product": "Add, modify or inactivate a Fixed deposit product",
       "Add, modify or inactivate a Recurring Deposit product": "Add, modify or inactivate a Recurring Deposit product",
       "Address": "Address",
+      "Personal Data": "Personal Data",
       "Adhoc Query": "Adhoc Query",
       "Advance Search": "Advanced Search",
       "Advanced search option for journal entries": "Advanced search option for journal entries",

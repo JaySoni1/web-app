@@ -306,7 +306,8 @@
       }
     },
     "breadcrumbs": {
-      "Home": "Domov"
+      "Home": "Domov",
+      "Account Transfers": "Převody mezi účty"
     },
     "buttons": {
       "Accept Transfer": "Přijmout převod",
@@ -863,9 +864,13 @@
       "Password validation": "Heslo by mělo obsahovat minimálně {{minchar}} znaků, které by měly obsahovat 1 velké písmeno, malé písmeno a speciální znak a nemělo by se skládat z opakujících se znaků nebo mezer.",
       "Must be at least": "Musí být alespoň",
       "Must be less or equal to": "Musí být menší nebo rovno",
-      "must be after or equal to start date": "musí být po nebo rovno datu zahájení"
+      "must be after or equal to start date": "musí být po nebo rovno datu zahájení",
+      "No classification data available": "Nejsou k dispozici žádná klasifikační data",
+      "No": "Ne",
+      "Yes": "Ano"
     },
     "passwordPreferences": {
+      "Password most be at least 1 character and not more that 50 characters long": "Heslo musí obsahovat alespoň 1 znak a ne více než 50 znaků",
       "Password must be at least 1 character and not more than 50 characters long": "Heslo musí obsahovat alespoň 1 znak a ne více než 50 znaků",
       "Password must be at least 6 characters, no more than 50 characters long, must include at least one upper case letter, one lower case letter, one numeric digit and no space": "Heslo musí obsahovat alespoň 6 znaků, ne více než 50 znaků, musí obsahovat alespoň jedno velké písmeno, jedno malé písmeno, jednu číslici a žádnou mezeru",
       "Password must be 12 to 50 characters long, containing at least one uppercase letter, one lowercase letter, one numeric digit, and one special character, with no spaces or consecutive repeating characters": "Heslo musí být dlouhé 12 až 50 znaků, obsahovat alespoň jedno velké písmeno, jedno malé písmeno, jednu číslici a jeden speciální znak, bez mezer nebo po sobě jdoucích opakujících se znaků"
@@ -1252,7 +1257,15 @@
       "Date": "Datum",
       "Secure & Reliable": "Bezpečné a spolehlivé",
       "Community Driven": "Komunitně řízené",
-      "Global Impact": "Globální dopad"
+      "Global Impact": "Globální dopad",
+      "Personal Information": "Osobní informace",
+      "Account Information": "Informace o účtu",
+      "Entity Details": "Detaily entity",
+      "Group Membership": "Členství ve skupině",
+      "Important Dates": "Důležitá data",
+      "Contact Information": "Kontaktní informace",
+      "Classification": "Klasifikace",
+      "Status": "Stav"
     },
     "inputs": {
       "accounting": {
@@ -1262,6 +1275,9 @@
         "INCOME": "PŘÍJEM",
         "EXPENSE": "NÁKLADY"
       },
+      "Basic": "Základní",
+      "Standard": "Standardní",
+      "Strong": "Silný",
       "ACCOUNTING": "ÚČETNICTVÍ",
       "Percentage is required": "Je vyžadováno procento",
       "ADDRESS": "ADRESA",
@@ -1766,6 +1782,7 @@
       "Gap between Installments": "Mezera mezi splátkami: (min",
       "Gender": "Rod",
       "General": "Všeobecné",
+      "Personal Data": "Osobní údaje",
       "Generate Repayment Schedule": "Generovat plán splácení",
       "Global Configurations": "Globální konfigurace",
       "Goodwill credit": "Úvěr dobré vůle",
@@ -2174,6 +2191,7 @@
       "Amount Range From": "Rozsah částky Od",
       "Amount Range To": "Rozsah částky do",
       "Person": "Osoba",
+      "Client Status": "Stav klienta",
       "Phone Number": "Telefonní číslo",
       "Place Guarantee Funds On-Hold": "Pozastavení záručních fondů",
       "Port": "Přístav",
@@ -2808,6 +2826,7 @@
     "Add, modify or inactivate a Fixed deposit product": "Přidejte, upravte nebo deaktivujte produkt s pevným vkladem",
     "Add, modify or inactivate a Recurring Deposit product": "Přidejte, upravte nebo deaktivujte produkt s opakovaným vkladem",
     "Address": "Adresa",
+    "Personal Data": "Osobní údaje",
     "Adhoc Query": "Adhoc dotaz",
     "Advance Search": "pokročilé vyhledávání",
     "Advanced search option for journal entries": "Možnost pokročilého vyhledávání záznamů v deníku",
