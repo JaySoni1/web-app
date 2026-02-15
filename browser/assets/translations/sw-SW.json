@@ -1295,6 +1295,11 @@
       "Pending Tasks": "Kazi Zinazongoja"
     },
     "inputs": {
+      "Floating rate": "Kiwango cha Kuelea",
+      "Differential rate": "Kiwango cha Tofauti",
+      "Minimum interest rate": "Kiwango cha Riba cha Chini",
+      "Interest rate": "Kiwango cha Riba",
+      "Maximum interest rate": "Kiwango cha Riba cha Juu",
       "Terms": "Masharti",
       "Settings": "Mipangilio",
       "accounting": {
@@ -1751,6 +1756,12 @@
       "External ID": "Kitambulisho cha Nje",
       "External Id": "Kitambulisho cha Nje",
       "External id": "Kitambulisho cha nje",
+      "External ID not found": "Kitambulisho cha Nje hakijapatikana",
+      "External ID lookup failed": "Utafutaji wa Kitambulisho cha Nje umeshindwa",
+      "External ID format is invalid": "Muundo wa Kitambulisho cha Nje si sahihi",
+      "External ID verified successfully": "Kitambulisho cha Nje kimethibitishwa kwa mafanikio",
+      "Looking up External ID...": "Inatafuta Kitambulisho cha Nje...",
+      "External ID lookup timed out": "Muda wa utafutaji wa Kitambulisho cha Nje umeisha",
       "event with entity name of": "tukio lenye jina la huluki ya",
       "FAMILY MEMBERS": "WANAFAMILIA",
       "FCM End Point": "FCM Mwisho Point",
