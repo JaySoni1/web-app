@@ -16,7 +16,7 @@
     "Buy Down Fee Adjustment amount must be lower or equal to": "Kiasi cha Marekebisho ya Ada ya Kununua Chini lazima kiwe cha chini au sawa na",
     "Email not valid": "Barua pepe si halali",
     "Filling Details": "Bofya ili kuanza kujaza maelezo. * maeneo ya alama ni muhimu. Kwa maelezo zaidi bofya:",
-    "Password is required": "Nenosiri linahitajika",
+    "Password is required": "Nenosiri linahitajika (urefu wa chini {{min}})",
     "Searched query resulted more than 200 records": "Hoja iliyotafutwa ilisababisha zaidi ya rekodi 200, kuonyesha rekodi 200 za kwanza.",
     "Username is required": "Jina la mtumiaji linahitajika",
     "Username or password incorrect.": "Jina la mtumiaji au nenosiri sio sahihi",
@@ -426,6 +426,7 @@
       "Create Interest Refund": "Unda Marejesho ya Riba",
       "Create Journal Entries": "Unda Maingizo ya Jarida",
       "Create Loan Product": "Tengeneza Bidhaa ya Mkopo",
+      "Create Working Capital Product": "Unda Bidhaa ya Mtaji wa Kufanya Kazi",
       "Create Office": "Unda Ofisi",
       "Create Payment Type": "Unda Aina ya Malipo",
       "Create Preference": "Tengeneza Upendeleo",
@@ -1147,6 +1148,7 @@
       "Loan Originators": "Waanzilishi wa Mikopo",
       "Loan Product": "Bidhaa ya Mkopo",
       "Loan Products": "Bidhaa za Mkopo",
+      "Working Capital Product": "Bidhaa ya Mtaji wa Kufanya Kazi",
       "Loan Provisioning Criteria": "Vigezo vya Utoaji wa Mkopo",
       "Loan Purpose": "Madhumuni ya Mkopo",
       "Loan Repayments": "Marejesho ya Mikopo",
@@ -1374,6 +1376,7 @@
       "Add Profile Entry": "Ongeza ingizo la wasifu"
     },
     "inputs": {
+      "Loan Account Status": "Hali ya akaunti ya mkopo",
       "Floating rate": "Kiwango cha Kuelea",
       "Differential rate": "Kiwango cha Tofauti",
       "Minimum interest rate": "Kiwango cha Riba cha Chini",
@@ -1446,6 +1449,7 @@
       "Adjust interest rates for remainder of loan": "Rekebisha viwango vya riba kwa salio la mkopo",
       "Adjustment Amount": "Kiasi cha Marekebisho",
       "Advance payments adjustment type": "Aina ya marekebisho ya malipo ya mapema",
+      "Advanced Credit Allocation Transactions": "Miamala ya Ugawaji wa Mikopo ya Kina",
       "Advanced Payment Allocation Transactions": "Miamala ya Kina ya Ugawaji wa Malipo",
       "Advanced Payment Allocation Transaction Type": "Aina ya ununuzi wa ugawaji wa malipo ya hali ya juu",
       "Affected GL Entry (Credit)": "Ingizo la GL lililoathiriwa (Mikopo)",
@@ -2070,6 +2074,7 @@
       "Loan Account Classification": "Uainishaji wa Akaunti ya Mkopo",
       "Loan Account Number": "Nambari ya Akaunti ya Mkopo",
       "Loan Account OverView": "Muhtasari wa Akaunti ya Mkopo",
+
       "Loan Amount and Balance": "Kiasi cha Mkopo na Salio",
       "Loan Approval": "Idhini ya Mkopo",
       "Loan Balance": "Salio la Mkopo",
@@ -2322,6 +2327,7 @@
       "Percentage to Base": "Asilimia kwa Msingi",
       "Period": "Kipindi",
       "Period From": "Kipindi Kutoka",
+      "Period Payment Rate": "Kiwango cha Malipo ya Kipindi",
       "Period To": "Kipindi Kwa",
       "Period Type": "Aina ya Kipindi",
       "Amount Range From": "Kiwango cha kuanzia",
@@ -2714,7 +2720,9 @@
           "Is Equal Amortization?": "Je, Ulipaji Mapato Sawa?",
           "amortizationType": {
             "Equal installments": "Awamu sawa",
-            "Equal principal payments": "Malipo ya msingi sawa"
+            "Equal principal payments": "Malipo ya msingi sawa",
+            "Effective Interest Rate": "Kiwango cha Riba Kinachofaa",
+            "Flat": "Gorofa"
           }
         }
       },
@@ -2780,7 +2788,14 @@
       "Enter first name (include middle name)": "Ingiza jina la kwanza (pamoja na jina la kati)",
       "Enter last name": "Ingiza jina la mwisho",
       "Sender name": "Jina la mtumaji",
-      "Retry": "Jaribu tena"
+      "Retry": "Jaribu tena",
+      "Flat Percentage Amount": "Kiasi cha Asilimia Tawanyiko",
+      "Delinquency Bucket Classification": "Uainishaji wa Ndoo ya Uhalifu",
+      "Discount Default": "Punguzo Chaguomsingi",
+      "Period Payment Frequency": "Mara kwa Mara za Malipo ya Kipindi",
+      "Period Payment Frequency Type": "Aina ya Mara kwa Mara za Malipo ya Kipindi",
+      "Payment Allocation Transactions": "Miamala ya Ugawaji wa Malipo",
+      "Net Present Value day count": "Idadi halisi ya siku za Thamani ya Sasa"
     },
     "links": {
       "Community": "Jumuiya",
