@@ -288,6 +288,7 @@
     "validation.msg.savingsproduct.withdrawalFeeType.is.not.one.of.expected.enumerations": "출금 수수료 기간 유형은 필수입니다."
   },
   "labels": {
+    "Mifos Reporting Plugin for Eclipse Birt": "Mifos Reporting Plugin for Eclipse Birt",
     "version": {
       "Tenant": "임차인",
       "Mifos WebApp": "Mifos® WebApp",
@@ -309,7 +310,7 @@
     },
     "aboutUs": {
       "Introduction": "Mifos 이니셔티브는 501(c)(3) 비영리 단체이자 개발자, 금융 기관 및 사회적 기업가들의 글로벌 커뮤니티입니다. 우리는 금융 서비스에 대한 접근이 기본적인 인권이라고 믿지만, 수십억 명의 사람들이 여전히 공식 금융 시스템에서 배제되어 있습니다.",
-      "Platform Description": "우리는 <a href=\"https://mifos.org\" target=\"_blank\" rel=\"noopener noreferrer\">Mifos X 플랫폼</a>\u2014세계 최고의 오픈소스 핵심 뱅킹 시스템을 제공하여 이 격차를 해소합니다. 엔터프라이즈급 뱅킹 기술을 무료로 접근 가능하게 함으로써, 소액금융기관(MFI), 핀테크 및 NGO의 진입 장벽을 낮추어 그들이 영향력을 확대하고 \"라스트 마일\"을 효율적으로 서비스할 수 있도록 합니다.",
+      "Platform Description": "우리는 <a href=\"https://mifos.org\" target=\"_blank\" rel=\"noopener noreferrer\">Mifos X 플랫폼</a>—세계 최고의 오픈소스 핵심 뱅킹 시스템을 제공하여 이 격차를 해소합니다. 엔터프라이즈급 뱅킹 기술을 무료로 접근 가능하게 함으로써, 소액금융기관(MFI), 핀테크 및 NGO의 진입 장벽을 낮추어 그들이 영향력을 확대하고 \"라스트 마일\"을 효율적으로 서비스할 수 있도록 합니다.",
       "Mission": "오픈소스 기술, 커뮤니티 및 지식 공유의 생태계를 촉진하여 금융 포용을 가속화합니다.",
       "Vision": "모든 개인과 소기업이 위치나 소득 수준에 관계없이 번영하는 데 필요한 금융 도구에 접근할 수 있는 세상.",
       "Why Open Source": "우리는 금융 인프라가 다음과 같아야 한다고 믿기 때문에 오픈소스 모델을 선택했습니다:",
@@ -2527,6 +2528,7 @@
       "COMPLETE": "완료",
       "Screen Report": "화면보고",
       "Search Journal Entries": "저널 항목 검색",
+      "Search Permissions": "권한 검색",
       "Select Action": "작업 선택",
       "Select Client Members for Transfer": "이전할 고객 구성원 선택",
       "Select Currency": "통화 선택",
@@ -2826,7 +2828,8 @@
       "Period Payment Frequency": "기간별 지급 빈도",
       "Period Payment Frequency Type": "기간별 지급 빈도 유형",
       "Payment Allocation Transactions": "지불 할당 거래",
-      "Net Present Value day count": "순현재가치 일수 계산"
+      "Net Present Value day count": "순현재가치 일수 계산",
+      "Installment": "할부"
     },
     "links": {
       "Community": "지역 사회",
@@ -3084,6 +3087,7 @@
       "Audit Trails": "감사 추적",
       "Audit logs of all the activities": "클라이언트 생성, 대출 지급 등과 같은 모든 활동에 대한 감사 로그",
       "Bar": "술집",
+      "BIRT": "Mifos Reporting Plugin for Eclipse Birt",
       "Bulk Import": "대량 가져오기",
       "Bulk Loan Reassignment": "대량대출 재할당",
       "Bulk data import using excel spreadsheet templates": "고객, 사무실 등을 위한 Excel 스프레드시트 템플릿을 사용하여 대량 데이터 가져오기",
@@ -3449,6 +3453,7 @@
       "No checker inbox data available for this search": "이 검색에 사용할 수 있는 검사기 받은 편지함 데이터가 없습니다.",
       "No client was found": "클라이언트를 찾을 수 없습니다.",
       "No data found": "데이터가 없습니다",
+      "No permissions found": "권한이 없습니다",
       "No penalties found": "패널티가 없습니다",
       "NoDocuments": "사용 가능한 문서가 없습니다.",
       "NoFileSelected": "선택된 파일 없음",
@@ -3476,7 +3481,7 @@
       "Passwords": "비밀번호",
       "Pay Charge": "요금 지불",
       "Payment Types": "결제 유형",
-      "Pentaho": "",
+      "Pentaho": "Mifos Reporting Plugin for Pentaho",
       "Periodic Accrual Accounting": "정기 발생회계",
       "Pie": "파이",
       "Please enter the OTP": "OTP를 입력해주세요",

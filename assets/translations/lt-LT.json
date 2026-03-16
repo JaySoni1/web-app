@@ -288,6 +288,7 @@
     "validation.msg.savingsproduct.withdrawalFeeType.is.not.one.of.expected.enumerations": "Išėmimo mokesčio laikotarpio tipas yra privalomas."
   },
   "labels": {
+    "Mifos Reporting Plugin for Eclipse Birt": "Mifos Reporting Plugin for Eclipse Birt",
     "version": {
       "Tenant": "Nuomininkas",
       "Mifos WebApp": "Mifos® WebApp",
@@ -2524,6 +2525,7 @@
       "COMPLETE": "BAIGTA",
       "Screen Report": "Ekrano ataskaita",
       "Search Journal Entries": "Ieškoti žurnalo įrašų",
+      "Search Permissions": "Ieškoti leidimų",
       "Select Action": "Pasirinkite Veiksmas",
       "Select Client Members for Transfer": "Pasirinkite Kliento narius, kuriuos norite perkelti",
       "Select Currency": "Pasirinkite Valiuta",
@@ -2826,7 +2828,8 @@
       "Period Payment Frequency": "Laikotarpis Mokėjimo dažnumas",
       "Period Payment Frequency Type": "Laikotarpio mokėjimo dažnumo tipas",
       "Payment Allocation Transactions": "Mokėjimų paskirstymo operacijos",
-      "Net Present Value day count": "Grynosios dabartinės vertės dienų skaičius"
+      "Net Present Value day count": "Grynosios dabartinės vertės dienų skaičius",
+      "Installment": "Įmoka"
     },
     "links": {
       "Community": "bendruomenė",
@@ -3085,6 +3088,7 @@
       "Audit Trails": "Audito takai",
       "Audit logs of all the activities": "Audito žurnalus apie visas veiklas, tokias kaip kliento kūrimas, paskolų išmokėjimas ir kt",
       "Bar": "Baras",
+      "BIRT": "Mifos Reporting Plugin for Eclipse Birt",
       "Bulk Import": "Masinis importas",
       "Bulk Loan Reassignment": "Masinės paskolos perskirstymas",
       "Bulk data import using excel spreadsheet templates": "Masinis duomenų importavimas naudojant „Excel“ skaičiuoklės šablonus klientams, biurams ir kt.",
@@ -3450,6 +3454,7 @@
       "No checker inbox data available for this search": "Nėra šios paieškos tikrinimo gautųjų duomenų.",
       "No client was found": "Klientas nerastas",
       "No data found": "Duomenų nerasta",
+      "No permissions found": "Leidimų nerasta",
       "No penalties found": "Delspinigiai nerasti",
       "NoDocuments": "Nėra dokumentų.",
       "NoFileSelected": "Failas nepasirinktas",
@@ -3477,7 +3482,7 @@
       "Passwords": "Slaptažodžiai",
       "Pay Charge": "Mokėti mokestį",
       "Payment Types": "Mokėjimo tipai",
-      "Pentaho": "",
+      "Pentaho": "Mifos Reporting Plugin for Pentaho",
       "Periodic Accrual Accounting": "Periodinė kaupimo apskaita",
       "Pie": "Pyragas",
       "Please enter the OTP": "Įveskite vienkartinį kodą",
