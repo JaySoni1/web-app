@@ -1,4 +1,4 @@
-{
+﻿{
   "APP_NAME": "Mifos® X WebApp",
   "Logged in as": "logado como",
   "Remember me": "Lembre de mim",
@@ -600,7 +600,7 @@
       "Deselect All": "Desmarcar todos",
       "Disable": "Desativar",
       "Dividends": "Dividendos",
-      "Download": "Download",
+      "Download": "Transferir",
       "Download CSV": "Baixar CSV",
       "Draw": "Desenhar",
       "Edit": "Editar",
@@ -1487,7 +1487,7 @@
       "Shares per Client": "Ações por Cliente",
       "Software Licensing": "Licenciamento de Software",
       "Standing Instructions History": "Histórico de instruções permanentes",
-      "Status": "Status",
+      "Status": "Estado",
       "Submitted On Date": "Enviado na data",
       "Success!": "Sucesso!",
       "Successfully completed": "Você concluiu com êxito a configuração do",
@@ -1550,8 +1550,7 @@
       "identifier id": "ID do identificador",
       "savings-transaction-datatable-tab works": "poupança-transação-datatable-tab funciona",
       "successfully select option": "com sucesso. Selecione uma das opções abaixo para prosseguir.",
-      "undo_account_transfer": "Reverter transferência de conta",
-      "Quick Access": "Quick Access"
+      "undo_account_transfer": "Reverter transferência de conta"
     },
     "inputs": {
       "# Remittance": "# Remessa",
@@ -1593,7 +1592,11 @@
       "Active Overdue Client Loans": "Empréstimos de clientes vencidos ativos",
       "Active Overdue Group Loans": "Empréstimos de grupo ativos vencidos",
       "Active Status": "Status Ativo",
+      "Actual Amortization": "Amortização real",
       "Actual Available Balance": "Saldo Disponível Real",
+      "Actual Balance": "Saldo real",
+      "Actual Discount Fee Balance": "Saldo real de taxa de desconto",
+      "Actual Payment": "Pagamento real",
       "Add Clients": "Adicionar clientes",
       "Add Fee Frequency": "Adicionar frequência de taxas",
       "Add Groups": "Adicionar grupos",
@@ -1632,7 +1635,6 @@
       "Amortization Schedule": "Plano de Amortização",
       "Amortization Type": "Tipo de Amortização",
       "Amortized Amount": "Valor Amortizado",
-      "Amortized Income": "Rendimento Amortizado",
       "Amount": "Quantia",
       "Amount Collected": "Valor arrecadado",
       "Amount Paid": "Quantia paga",
@@ -1642,7 +1644,6 @@
       "Amount Range To": "Faixa de valor até",
       "Amount Received/Returned": "Valor recebido/devolvido",
       "Amount to be Reserved": "Valor a ser reservado",
-      "Annual EIR": "TER Anual",
       "Annual Fees Transaction Date": "Data de transação de taxas anuais",
       "Applicable From Date": "Aplicável a partir da data",
       "Applicant": "Candidato",
@@ -1872,7 +1873,6 @@
       "DEFERRED INCOME RECOGNITION": "Reconhecimento de receita diferida",
       "DETAILS": "DETALHES",
       "Daily": "Diário",
-      "Daily EIR": "TER Diária",
       "Dashboard": "Painel",
       "Data": "Dados",
       "Data Table": "Tabela de dados",
@@ -1912,7 +1912,6 @@
       "Default Savings Account": "Conta poupança padrão",
       "Default Shares per Client": "Compartilhamentos padrão por cliente",
       "Default Theme": "Tema Padrão",
-      "Deferred Balance": "Saldo diferido",
       "Deferred income": "Renda diferida",
       "Deleted": "Excluído",
       "Delinquency Action": "Ação de inadimplência",
@@ -1961,8 +1960,6 @@
       "Disbursement on": "Desembolso em",
       "Discount": "Desconto",
       "Discount Default": "Desconto padrão",
-      "Discount Factor": "Fator de desconto",
-      "Discount Fee": "Taxa de desconto",
       "Discount must be greater than or equal to 0": "O desconto deve ser maior ou igual a 0",
       "Display Name": "Nome de exibição",
       "Dividend Amount": "Valor do Dividendo",
@@ -1978,7 +1975,7 @@
       "Documents": "Documentos",
       "Dormancy Tracking": "Rastreamento de dormência",
       "Down Payments": "Adiantamentos",
-      "Download": "Download",
+      "Download": "Transferir",
       "Driver's License": "Carta de condução",
       "Dropdown": "Suspenso",
       "Due": "Devido",
@@ -2037,8 +2034,10 @@
       "Existing Meeting Date": "Data da reunião existente",
       "Expected Amortization Amount": "Valor de amortização esperado",
       "Expected Amount": "Valor Esperado",
+      "Expected Balance": "Saldo esperado",
       "Expected Disbursement Date": "Data prevista de desembolso",
       "Expected Disbursement On": "Desembolso esperado em",
+      "Expected Discount Fee Balance": "Saldo esperado de taxa de desconto",
       "Expected Payment Amount": "Valor de pagamento esperado",
       "Expected disbursement on": "Desembolso esperado em",
       "Expense Account": "Conta de despesa",
@@ -2097,7 +2096,6 @@
       "Floating Rate Periods": "Períodos de taxa flutuante",
       "Floating rate": "Taxa flutuante",
       "Follow": "Seguir",
-      "Forecast Payment Amount": "Valor de pagamento previsto",
       "Frequency": "Frequência",
       "Frequency Interval": "Intervalo de frequência",
       "Frequency Interval for compounding": "Intervalo de frequência para composição",
@@ -2442,7 +2440,6 @@
       "Municipality": "Município",
       "N/A": "N / D",
       "NID": "NID",
-      "NPV Value": "Valor Presente Líquido",
       "Name": "Nome",
       "Name Decorated": "Nome Decorado",
       "Name of the Organization": "Nome da Organização",
@@ -2453,7 +2450,6 @@
       "Near Breach Evaluation Frequency": "Frequência de avaliação de violação próxima",
       "Near Breach Evaluation Frequency Type": "Tipo de frequência de avaliação de violação próxima",
       "Near Breach Threshold": "Limiar de violação próxima",
-      "Net Amortization Amount": "Valor líquido de amortização",
       "Net Cash": "Caixa líquido",
       "Net Present Value day count": "Contagem de dias do Valor Presente Líquido",
       "New Interest Rate": "Nova taxa de juros",
@@ -2597,7 +2593,7 @@
       "Payment Type Id": "ID do tipo de pagamento",
       "Payment due as of": "Pagamento devido a partir de",
       "Payment due at": "Pagamento devido em",
-      "Payments Left": "Payments Left",
+      "Payments Left": "Pagamentos restantes",
       "Payments due on non working days": "Pagamentos devidos em dias não úteis",
       "Payout Amount": "Valor do pagamento",
       "Payout Country": "País do pagamento",
@@ -2617,7 +2613,6 @@
       "Period": "Período",
       "Period From": "Periodo de",
       "Period Number": "Número do Período",
-      "Period Payment Amount": "Valor do pagamento do período",
       "Period Payment Frequency": "Periodicidade de pagamento",
       "Period Payment Frequency Type": "Tipo de frequência de pagamento do período",
       "Period Payment Rate": "Taxa de pagamento por período",
@@ -2859,7 +2854,7 @@
       "Starting date": "Data de início",
       "State": "Estado",
       "State / Province": "Estado/Província",
-      "Status": "Status",
+      "Status": "Estado",
       "Step Name": "Nome da etapa",
       "Street": "Rua",
       "String": "Corda",
@@ -2874,7 +2869,7 @@
       "Submitted on Date From": "Enviado na data de",
       "Submitted on Date To": "Enviado na data até",
       "Submitted on date": "Enviado na data",
-      "Substatus": "Substatus",
+      "Substatus": "Sub-estado",
       "Success Count": "Contagem de sucesso",
       "Summary": "Resumo",
       "Sunday": "Domingo",
@@ -4015,16 +4010,7 @@
       "username": "nome de usuário",
       "withhold tax for this account": "reter imposto para esta conta",
       "withoutCategory": "Sem categoria",
-      "“Maker-Checker” principle requires every tasks": "O princípio “Maker-Checker” exige que todas as tarefas sejam concluídas por duas pessoas para reduzir a chance de erros e uso indevido. Uma pessoa inicia o processo e a segunda o conclui.",
-      "Navigate directly to any platform area": "Navigate directly to any platform area",
-      "Profiles and accounts": "Profiles & accounts",
-      "Group lending": "Group lending",
-      "Center banking": "Center banking",
-      "Journals and ledger": "Journals & ledger",
-      "Configure offerings": "Configure offerings",
-      "Savings accounts": "Savings accounts",
-      "Offices and staff": "Offices & staff",
-      "System configuration": "Configuration"
+      "“Maker-Checker” principle requires every tasks": "O princípio “Maker-Checker” exige que todas as tarefas sejam concluídas por duas pessoas para reduzir a chance de erros e uso indevido. Uma pessoa inicia o processo e a segunda o conclui."
     },
     "permissions": {
       "actions": {
@@ -4323,6 +4309,45 @@
       "validationSaved": "Dados de validação guardados com sucesso.",
       "workingCapitalDiscountUpdated": "O desconto do empréstimo de fundo de maneio foi atualizado com sucesso.",
       "unableToUpdateDiscount": "Não foi possível atualizar o desconto."
+    },
+    "selections": {
+      "standingInstructions": {
+        "accountTransferType": {
+          "account.transfer": "Transferência para Conta Poupança",
+          "loan.repayment": "Amortização de Empréstimo"
+        },
+        "standingInstructionPriority": {
+          "urgent": "Urgente",
+          "high": "Alta",
+          "medium": "Média",
+          "low": "Baixa"
+        },
+        "standingInstructionStatus": {
+          "active": "Ativa",
+          "disabled": "Inativa",
+          "deleted": "Eliminada"
+        },
+        "accountType": {
+          "savings": "Conta Poupança",
+          "loan": "Conta de Empréstimo"
+        },
+        "standingInstructionType": {
+          "fixed": "Valor Fixo",
+          "dues": "Valor da Prestação"
+        },
+        "accountTransferRecurrenceType": {
+          "periodic": "Periódica",
+          "as.per.dues": "De Acordo com o Vencimento"
+        },
+        "frequencyperiodFrequencyType": {
+          "days": "Dias",
+          "weeks": "Semanas",
+          "months": "Meses",
+          "years": "Anos"
+        },
+        "own.account": "Conta Própria",
+        "other.bank": "Outro Banco"
+      }
     }
   },
   "languages": {

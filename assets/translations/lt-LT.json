@@ -1,4 +1,4 @@
-{
+﻿{
   "APP_NAME": "Mifos® X WebApp",
   "Logged in as": "prisijungęs kaip",
   "Remember me": "Prisimink mane",
@@ -1275,7 +1275,7 @@
       "Global Configuration options": "Visuotinės konfigūracijos parinktys ir jų dabartinė būsena. Norėdami gauti daugiau informacijos, spustelėkite",
       "Global Impact": "Pasaulinis poveikis",
       "Grace On Interest": "Malonė dėl palūkanų",
-      "Grace On Principal": "Grace On Principal",
+      "Grace On Principal": "Pagrindinės sumos atidėjimo laikotarpis",
       "Group Details": "Grupės informacija",
       "Group Members": "Grupės nariai",
       "Group Membership": "Grupės narystė",
@@ -1550,8 +1550,7 @@
       "identifier id": "identifikatoriaus id",
       "savings-transaction-datatable-tab works": "taupymo-operacijų-duomenų lentelės-skirtukas veikia",
       "successfully select option": "sėkmingai. Jei norite tęsti, pasirinkite iš toliau pateiktų parinkčių.",
-      "undo_account_transfer": "Atšaukti sąskaitos pervedimą",
-      "Quick Access": "Quick Access"
+      "undo_account_transfer": "Atšaukti sąskaitos pervedimą"
     },
     "inputs": {
       "# Remittance": "# Pervedimas",
@@ -1593,7 +1592,11 @@
       "Active Overdue Client Loans": "Aktyvios vėluojančios klientų paskolos",
       "Active Overdue Group Loans": "Aktyvios pradelstos grupinės paskolos",
       "Active Status": "Aktyvus statusas",
+      "Actual Amortization": "Faktinė amortizacija",
       "Actual Available Balance": "Faktinis laisvas likutis",
+      "Actual Balance": "Faktinis likutis",
+      "Actual Discount Fee Balance": "Faktinis nuolaidos mokesčio likutis",
+      "Actual Payment": "Faktinis mokėjimas",
       "Add Clients": "Pridėti klientų",
       "Add Fee Frequency": "Pridėti mokesčių dažnumą",
       "Add Groups": "Pridėti grupes",
@@ -1632,7 +1635,6 @@
       "Amortization Schedule": "Amortizacijos Grafikas",
       "Amortization Type": "Amortizacijos tipas",
       "Amortized Amount": "Amortizuota suma",
-      "Amortized Income": "Amortizuotos pajamos",
       "Amount": "Suma",
       "Amount Collected": "Surinkta suma",
       "Amount Paid": "Sumokėta suma",
@@ -1642,7 +1644,6 @@
       "Amount Range To": "Sumos diapazonas Iki",
       "Amount Received/Returned": "Gauta/grąžinta suma",
       "Amount to be Reserved": "Rezervuojama suma",
-      "Annual EIR": "Metinis EIR",
       "Annual Fees Transaction Date": "Metinių mokesčių operacijos data",
       "Applicable From Date": "Taikoma nuo datos",
       "Applicant": "Pareiškėjas",
@@ -1872,7 +1873,6 @@
       "DEFERRED INCOME RECOGNITION": "Atidėtųjų pajamų pripažinimas",
       "DETAILS": "DUOMENYS",
       "Daily": "Kasdien",
-      "Daily EIR": "Dienos EIR",
       "Dashboard": "Prietaisų skydelis",
       "Data": "Duomenys",
       "Data Table": "Duomenų lentelė",
@@ -1912,7 +1912,6 @@
       "Default Savings Account": "Numatytoji taupomoji sąskaita",
       "Default Shares per Client": "Numatytosios akcijos vienam klientui",
       "Default Theme": "Numatytoji tema",
-      "Deferred Balance": "Atidėtas likutis",
       "Deferred income": "Atidėtos pajamos",
       "Deleted": "Ištrinta",
       "Delinquency Action": "Deliktingumo veiksmas",
@@ -1961,8 +1960,6 @@
       "Disbursement on": "Išmokėjimas įjungtas",
       "Discount": "Nuolaida",
       "Discount Default": "Numatytoji nuolaida",
-      "Discount Factor": "Diskonto koeficientas",
-      "Discount Fee": "Nuolaidų mokestis",
       "Discount must be greater than or equal to 0": "Nuolaida turi būti didesnė arba lygi 0",
       "Display Name": "Rodomas pavadinimas",
       "Dividend Amount": "Dividendų suma",
@@ -2035,11 +2032,13 @@
       "Execution Time": "Vykdymo laikas",
       "Existing Client": "Esamas Klientas",
       "Existing Meeting Date": "Esamo susitikimo data",
-      "Expected Amortization Amount": "Tikėtina amortizacijos suma",
+      "Expected Amortization Amount": "Numatoma amortizacijos suma",
       "Expected Amount": "Numatoma Suma",
+      "Expected Balance": "Numatomas likutis",
       "Expected Disbursement Date": "Numatoma išmokėjimo data",
       "Expected Disbursement On": "Numatoma išmokėti",
-      "Expected Payment Amount": "Tikėtina mokėjimo suma",
+      "Expected Discount Fee Balance": "Numatomas nuolaidos mokesčio likutis",
+      "Expected Payment Amount": "Numatoma mokėjimo suma",
       "Expected disbursement on": "Numatomas išmokėjimas",
       "Expense Account": "Išlaidų sąskaita",
       "Expense Account (DR)": "Išlaidų sąskaita (DR)",
@@ -2097,7 +2096,6 @@
       "Floating Rate Periods": "Kintamo kurso laikotarpiai",
       "Floating rate": "Slankioji norma",
       "Follow": "Sekite",
-      "Forecast Payment Amount": "Prognozuojama mokėjimo suma",
       "Frequency": "Dažnis",
       "Frequency Interval": "Dažnio intervalas",
       "Frequency Interval for compounding": "Dažnio intervalas mišiniams",
@@ -2168,13 +2166,13 @@
       "Illegible document": "Neįskaitomas dokumentas",
       "Images": "Vaizdai",
       "Import Time": "Importavimo laikas",
-      "In Multiples Of": "In Multiples Of",
+      "In Multiples Of": "Kartotiniais",
       "In advance": "Iš anksto",
       "Incentive Type": "Paskatinimo tipas",
       "Include in Customer Loan Counter": "Įtraukti į klientų paskolų skaitiklį",
       "Income Account": "Pajamų sąskaita",
       "Income From Discount Fee": "Pajamos iš nuolaidų mokesčio",
-      "Income Modification": "Pajamų koregavimas",
+      "Income Modification": "Pajamų modifikavimas",
       "Income capitalization": "Pajamų kapitalizacija",
       "Income capitalization calculation type": "Pajamų kapitalizavimo skaičiavimo tipas",
       "Income capitalization strategy": "Pajamų kapitalizavimo strategija",
@@ -2442,7 +2440,6 @@
       "Municipality": "Savivaldybė",
       "N/A": "N/A",
       "NID": "Nacionalinis ID",
-      "NPV Value": "Grynoji dabartinė vertė",
       "Name": "vardas",
       "Name Decorated": "Vardas Dekoruotas",
       "Name of the Organization": "Organizacijos pavadinimas",
@@ -2453,7 +2450,6 @@
       "Near Breach Evaluation Frequency": "Artėjančio pažeidimo vertinimo dažnumas",
       "Near Breach Evaluation Frequency Type": "Artėjančio pažeidimo vertinimo dažnumo tipas",
       "Near Breach Threshold": "Artėjančio pažeidimo slenkstis",
-      "Net Amortization Amount": "Grynoji amortizacijos suma",
       "Net Cash": "Grynieji pinigai",
       "Net Present Value day count": "Grynosios dabartinės vertės dienų skaičius",
       "New Interest Rate": "Nauja palūkanų norma",
@@ -2597,7 +2593,7 @@
       "Payment Type Id": "Mokėjimo tipo ID",
       "Payment due as of": "Mokėjimo terminas",
       "Payment due at": "Mokėjimo terminas",
-      "Payments Left": "Payments Left",
+      "Payments Left": "Likusios įmokos",
       "Payments due on non working days": "Mokėjimai atliekami ne darbo dienomis",
       "Payout Amount": "Išmokos suma",
       "Payout Country": "Išmokos šalis",
@@ -2617,7 +2613,6 @@
       "Period": "Laikotarpis",
       "Period From": "Laikotarpis Nuo",
       "Period Number": "Laikotarpio Numeris",
-      "Period Payment Amount": "Laikotarpio mokėjimo suma",
       "Period Payment Frequency": "Laikotarpis Mokėjimo dažnumas",
       "Period Payment Frequency Type": "Laikotarpio mokėjimo dažnumo tipas",
       "Period Payment Rate": "Laikotarpio mokėjimo norma",
@@ -2839,7 +2834,7 @@
       "Shares per Client": "Akcijos vienam klientui",
       "Shares to be Issued": "Išleidžiamos akcijos",
       "Shares to be Issued * Nominal Price (Auto calculated)": "Išleidžiamos akcijos * Nominali kaina (skaičiuojama automatiškai)",
-      "Shift": "Shift",
+      "Shift": "Pamaina",
       "Short Name": "Trumpas vardas",
       "Show Closed Accounts": "Rodyti uždarytas sąskaitas",
       "Show Closed Centers": "Rodyti uždarus centrus",
@@ -3038,7 +3033,7 @@
       "WriteOff Reason": "Nurašymo priežastis",
       "Written Off": "Nurašytas",
       "Yearly": "Kasmet",
-      "Zip": "Zip",
+      "Zip": "Pašto kodas",
       "accounting": {
         "ASSET": "TURTAS",
         "LIABILITY": "ATSAKOMYBĖ",
@@ -3104,7 +3099,7 @@
       "Add Collateral": "Pridėti užstatą",
       "Add Interest Pause": "Pridėti susidomėjimo pauzę",
       "Add Loan Charge": "Pridėti paskolos mokestį",
-      "Admin": "Admin",
+      "Admin": "Administratorius",
       "All": "Visi",
       "App Configuration": "Programos konfigūracija",
       "Application Menu": "Programų meniu",
@@ -4016,16 +4011,7 @@
       "username": "Vartotojo vardas",
       "withhold tax for this account": "išskaičiuoti mokesčius už šią sąskaitą",
       "withoutCategory": "Bez kategorijos",
-      "“Maker-Checker” principle requires every tasks": "„Maker-Checker“ principas reikalauja, kad kiekvieną užduotį atliktų du žmonės, kad būtų sumažinta klaidų ir netinkamo naudojimo galimybė. Vienas asmuo pradeda procesą, o antrasis jį užbaigia.",
-      "Navigate directly to any platform area": "Navigate directly to any platform area",
-      "Profiles and accounts": "Profiles & accounts",
-      "Group lending": "Group lending",
-      "Center banking": "Center banking",
-      "Journals and ledger": "Journals & ledger",
-      "Configure offerings": "Configure offerings",
-      "Savings accounts": "Savings accounts",
-      "Offices and staff": "Offices & staff",
-      "System configuration": "Configuration"
+      "“Maker-Checker” principle requires every tasks": "„Maker-Checker“ principas reikalauja, kad kiekvieną užduotį atliktų du žmonės, kad būtų sumažinta klaidų ir netinkamo naudojimo galimybė. Vienas asmuo pradeda procesą, o antrasis jį užbaigia."
     },
     "permissions": {
       "actions": {
@@ -4324,6 +4310,45 @@
       "validationSaved": "Patvirtinimo duomenys sėkmingai išsaugoti.",
       "workingCapitalDiscountUpdated": "Apyvartinio kapitalo paskolos nuolaida buvo sėkmingai atnaujinta.",
       "unableToUpdateDiscount": "Nepavyko atnaujinti nuolaidos."
+    },
+    "selections": {
+      "standingInstructions": {
+        "accountTransferType": {
+          "account.transfer": "Pervidimas į taupomąją sąskaitą",
+          "loan.repayment": "Paskolos grąžinimas"
+        },
+        "standingInstructionPriority": {
+          "urgent": "Skubu",
+          "high": "Aukštas",
+          "medium": "Vidutinis",
+          "low": "Žemas"
+        },
+        "standingInstructionStatus": {
+          "active": "Aktyvus",
+          "disabled": "Išjungta",
+          "deleted": "Ištrinta"
+        },
+        "accountType": {
+          "savings": "Taupomoji sąskaita",
+          "loan": "Paskolos sąskaita"
+        },
+        "standingInstructionType": {
+          "fixed": "Fiksuota suma",
+          "dues": "Mokėtina suma"
+        },
+        "accountTransferRecurrenceType": {
+          "periodic": "Periodiškai",
+          "as.per.dues": "Pagal mokėjimo terminą"
+        },
+        "frequencyperiodFrequencyType": {
+          "days": "Dienos",
+          "weeks": "Savaitės",
+          "months": "Mėnesiai",
+          "years": "Metai"
+        },
+        "own.account": "Sava sąskaita",
+        "other.bank": "Kitas bankas"
+      }
     }
   },
   "languages": {

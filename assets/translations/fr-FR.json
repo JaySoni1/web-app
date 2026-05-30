@@ -1,4 +1,4 @@
-{
+﻿{
   "APP_NAME": "Mifos® X WebApp",
   "Logged in as": "connecté en tant que",
   "Remember me": "Souviens-toi de moi",
@@ -1554,8 +1554,7 @@
       "identifier id": "identifiant",
       "savings-transaction-datatable-tab works": "l'onglet datatable-transaction-d'épargne fonctionne",
       "successfully select option": "avec succès. Veuillez sélectionner parmi les options ci-dessous pour continuer.",
-      "undo_account_transfer": "Annuler le transfert de compte",
-      "Quick Access": "Quick Access"
+      "undo_account_transfer": "Annuler le transfert de compte"
     },
     "inputs": {
       "# Remittance": "# Transfert",
@@ -1597,7 +1596,11 @@
       "Active Overdue Client Loans": "Prêts clients actifs en retard",
       "Active Overdue Group Loans": "Prêts de groupe actifs en souffrance",
       "Active Status": "Statut actif",
+      "Actual Amortization": "Amortissement réel",
       "Actual Available Balance": "Solde disponible réel",
+      "Actual Balance": "Solde réel",
+      "Actual Discount Fee Balance": "Solde réel des frais de remise",
+      "Actual Payment": "Paiement réel",
       "Add Clients": "Ajouter des clients",
       "Add Fee Frequency": "Ajouter une fréquence de frais",
       "Add Groups": "Ajouter des groupes",
@@ -1636,7 +1639,6 @@
       "Amortization Schedule": "Tableau d'Amortissement",
       "Amortization Type": "Type d'amortissement",
       "Amortized Amount": "Montant amorti",
-      "Amortized Income": "Revenu amorti",
       "Amount": "Montant",
       "Amount Collected": "Montant collecté",
       "Amount Paid": "Le montant payé",
@@ -1646,7 +1648,6 @@
       "Amount Range To": "Fourchette de montant à",
       "Amount Received/Returned": "Montant reçu/retourné",
       "Amount to be Reserved": "Montant à réserver",
-      "Annual EIR": "TEG Annuel",
       "Annual Fees Transaction Date": "Date de transaction des frais annuels",
       "Applicable From Date": "Applicable à partir de la date",
       "Applicant": "Demandeur",
@@ -1876,7 +1877,6 @@
       "DEFERRED INCOME RECOGNITION": "Comptabilisation des produits différés",
       "DETAILS": "DÉTAILS",
       "Daily": "Tous les jours",
-      "Daily EIR": "TEG Journalier",
       "Dashboard": "Tableau de bord",
       "Data": "Données",
       "Data Table": "Tableau de données",
@@ -1916,7 +1916,6 @@
       "Default Savings Account": "Compte d'épargne par défaut",
       "Default Shares per Client": "Actions par défaut par client",
       "Default Theme": "Thème par défaut",
-      "Deferred Balance": "Solde différé",
       "Deferred income": "Produits différés",
       "Deleted": "Supprimé",
       "Delinquency Action": "Action de délinquance",
@@ -1965,8 +1964,6 @@
       "Disbursement on": "Décaissement le",
       "Discount": "Rabais",
       "Discount Default": "Remise par défaut",
-      "Discount Factor": "Facteur d'escompte",
-      "Discount Fee": "Frais d'escompte",
       "Discount must be greater than or equal to 0": "La rabais doit être supérieure ou égale à 0",
       "Display Name": "Afficher un nom",
       "Dividend Amount": "Montant du dividende",
@@ -2041,8 +2038,10 @@
       "Existing Meeting Date": "Date de réunion actuelle",
       "Expected Amortization Amount": "Montant d'amortissement prévu",
       "Expected Amount": "Montant Prévu",
+      "Expected Balance": "Solde prévu",
       "Expected Disbursement Date": "Date de décaissement prévue",
       "Expected Disbursement On": "Décaissement prévu le",
+      "Expected Discount Fee Balance": "Solde prévu des frais de remise",
       "Expected Payment Amount": "Montant de paiement prévu",
       "Expected disbursement on": "Décaissement attendu pour",
       "Expense Account": "Compte de dépenses",
@@ -2101,7 +2100,6 @@
       "Floating Rate Periods": "Périodes à taux variable",
       "Floating rate": "Taux flottant",
       "Follow": "Suivre",
-      "Forecast Payment Amount": "Montant de paiement prévisionnel",
       "Frequency": "Fréquence",
       "Frequency Interval": "Intervalle de fréquence",
       "Frequency Interval for compounding": "Intervalle de fréquence pour la composition",
@@ -2178,7 +2176,7 @@
       "Include in Customer Loan Counter": "Inclure dans le compteur de prêts clients",
       "Income Account": "Compte de revenu",
       "Income From Discount Fee": "Revenus de frais d'escompte",
-      "Income Modification": "Modification du revenu",
+      "Income Modification": "Modification de revenu",
       "Income capitalization": "Capitalisation des revenus",
       "Income capitalization calculation type": "Type de calcul de capitalisation des revenus",
       "Income capitalization strategy": "Stratégie de capitalisation des revenus",
@@ -2446,7 +2444,6 @@
       "Municipality": "Municipalité",
       "N/A": "N / A",
       "NID": "NID",
-      "NPV Value": "Valeur actuelle nette",
       "Name": "Nom",
       "Name Decorated": "Nom décoré",
       "Name of the Organization": "Nom de l'organisation",
@@ -2457,7 +2454,6 @@
       "Near Breach Evaluation Frequency": "Fréquence d'évaluation de violation proche",
       "Near Breach Evaluation Frequency Type": "Type de fréquence d'évaluation de violation proche",
       "Near Breach Threshold": "Seuil de violation proche",
-      "Net Amortization Amount": "Montant d'amortissement net",
       "Net Cash": "Trésorerie nette",
       "Net Present Value day count": "Nombre de jours de la valeur actuelle nette",
       "New Interest Rate": "Nouveau taux d'intérêt",
@@ -2601,7 +2597,7 @@
       "Payment Type Id": "Identifiant du type de paiement",
       "Payment due as of": "Paiement dû à compter du",
       "Payment due at": "Paiement dû à",
-      "Payments Left": "Payments Left",
+      "Payments Left": "Paiements restants",
       "Payments due on non working days": "Paiements dus les jours non ouvrables",
       "Payout Amount": "Montant du paiement",
       "Payout Country": "Pays de paiement",
@@ -2621,7 +2617,6 @@
       "Period": "Période",
       "Period From": "Période de",
       "Period Number": "Numéro de Période",
-      "Period Payment Amount": "Montant de paiement périodique",
       "Period Payment Frequency": "Fréquence de paiement périodique",
       "Period Payment Frequency Type": "Type de fréquence de paiement périodique",
       "Period Payment Rate": "Taux de paiement périodique",
@@ -4018,16 +4013,7 @@
       "username": "nom d'utilisateur",
       "withhold tax for this account": "retenir l'impôt sur ce compte",
       "withoutCategory": "Sans catégorie",
-      "“Maker-Checker” principle requires every tasks": "Le principe « Maker-Checker » exige que chaque tâche soit effectuée par deux personnes afin de réduire les risques d'erreurs et de mauvaise utilisation. Une personne lance le processus et la seconde le termine.",
-      "Navigate directly to any platform area": "Navigate directly to any platform area",
-      "Profiles and accounts": "Profiles & accounts",
-      "Group lending": "Group lending",
-      "Center banking": "Center banking",
-      "Journals and ledger": "Journals & ledger",
-      "Configure offerings": "Configure offerings",
-      "Savings accounts": "Savings accounts",
-      "Offices and staff": "Offices & staff",
-      "System configuration": "Configuration"
+      "“Maker-Checker” principle requires every tasks": "Le principe « Maker-Checker » exige que chaque tâche soit effectuée par deux personnes afin de réduire les risques d'erreurs et de mauvaise utilisation. Une personne lance le processus et la seconde le termine."
     },
     "permissions": {
       "actions": {
@@ -4326,6 +4312,45 @@
       "validationSaved": "Données de validation enregistrées avec succès.",
       "workingCapitalDiscountUpdated": "Le rabais du prêt de fonds de roulement a été mis à jour avec succès.",
       "unableToUpdateDiscount": "Impossible de mettre à jour le rabais."
+    },
+    "selections": {
+      "standingInstructions": {
+        "accountTransferType": {
+          "account.transfer": "Virement vers Compte d'Épargne",
+          "loan.repayment": "Remboursement de Prêt"
+        },
+        "standingInstructionPriority": {
+          "urgent": "Urgente",
+          "high": "Haute",
+          "medium": "Moyenne",
+          "low": "Basse"
+        },
+        "standingInstructionStatus": {
+          "active": "Active",
+          "disabled": "Désactivée",
+          "deleted": "Supprimée"
+        },
+        "accountType": {
+          "savings": "Compte d'Épargne",
+          "loan": "Compte de Prêt"
+        },
+        "standingInstructionType": {
+          "fixed": "Montant Fixe",
+          "dues": "Montant des Échéances"
+        },
+        "accountTransferRecurrenceType": {
+          "periodic": "Périodique",
+          "as.per.dues": "Selon les Échéances"
+        },
+        "frequencyperiodFrequencyType": {
+          "days": "Jours",
+          "weeks": "Semaines",
+          "months": "Mois",
+          "years": "Ans"
+        },
+        "own.account": "Compte Propre",
+        "other.bank": "Autre Banque"
+      }
     }
   },
   "languages": {

@@ -1,4 +1,4 @@
-{
+﻿{
   "APP_NAME": "Mifos® X WebApp",
   "Logged in as": "다음 계정으로 로그인됨",
   "Remember me": "날 기억해",
@@ -1387,7 +1387,7 @@
       "Moratorium": "모라토리엄",
       "Near Breach Configuration": "근접 위반 구성",
       "Nominal Interest Rate by loan cycle": "대출주기별 명목이자율",
-      "Not Yet Amortized Amount": "Not Yet Amortized Amount",
+      "Not Yet Amortized Amount": "미상각 금액",
       "Notes": "노트",
       "Notification External Service": "알림 외부 서비스",
       "Number of Repayments by loan cycle": "대출주기별 상환횟수",
@@ -1552,8 +1552,7 @@
       "identifier id": "식별자 ID",
       "savings-transaction-datatable-tab works": "저축 거래 데이터 테이블 탭이 작동합니다.",
       "successfully select option": "성공적으로. 계속 진행하려면 아래 옵션 중에서 선택하세요.",
-      "undo_account_transfer": "계좌 이체 취소",
-      "Quick Access": "Quick Access"
+      "undo_account_transfer": "계좌 이체 취소"
     },
     "inputs": {
       "# Remittance": "# 송금",
@@ -1595,7 +1594,11 @@
       "Active Overdue Client Loans": "활성 연체 고객 대출",
       "Active Overdue Group Loans": "활성 연체 그룹 대출",
       "Active Status": "활성 상태",
+      "Actual Amortization": "실제 상각",
       "Actual Available Balance": "실제 사용 가능 잔액",
+      "Actual Balance": "실제 잔액",
+      "Actual Discount Fee Balance": "실제 할인 수수료 잔액",
+      "Actual Payment": "실제 지급",
       "Add Clients": "클라이언트 추가",
       "Add Fee Frequency": "수수료 빈도 추가",
       "Add Groups": "그룹 추가",
@@ -1634,7 +1637,6 @@
       "Amortization Schedule": "상각 일정",
       "Amortization Type": "상각 유형",
       "Amortized Amount": "상각 금액",
-      "Amortized Income": "상각 수익",
       "Amount": "양",
       "Amount Collected": "수집금액",
       "Amount Paid": "금액 지급",
@@ -1644,7 +1646,6 @@
       "Amount Range To": "금액 범위:",
       "Amount Received/Returned": "수령/반품 금액",
       "Amount to be Reserved": "예약 금액",
-      "Annual EIR": "연간 EIR",
       "Annual Fees Transaction Date": "연회비 거래일",
       "Applicable From Date": "적용일자부터",
       "Applicant": "응모자",
@@ -1874,7 +1875,6 @@
       "DEFERRED INCOME RECOGNITION": "이연수익 인식",
       "DETAILS": "세부",
       "Daily": "일일",
-      "Daily EIR": "일일 EIR",
       "Dashboard": "계기반",
       "Data": "데이터",
       "Data Table": "데이터 테이블",
@@ -1914,7 +1914,6 @@
       "Default Savings Account": "기본 저축 계좌",
       "Default Shares per Client": "클라이언트당 기본 공유",
       "Default Theme": "기본 테마",
-      "Deferred Balance": "이연 잔액",
       "Deferred income": "이연소득",
       "Deleted": "삭제됨",
       "Delinquency Action": "연체 행동",
@@ -1963,8 +1962,6 @@
       "Disbursement on": "지불 날짜",
       "Discount": "할인",
       "Discount Default": "할인 기본값",
-      "Discount Factor": "할인 계수",
-      "Discount Fee": "할인 수수료",
       "Discount must be greater than or equal to 0": "할인은 0 이상이어야 합니다",
       "Display Name": "이름 표시하기",
       "Dividend Amount": "배당금액",
@@ -2039,9 +2036,11 @@
       "Existing Meeting Date": "기존 회의 날짜",
       "Expected Amortization Amount": "예상 상각 금액",
       "Expected Amount": "예상 금액",
+      "Expected Balance": "예상 잔액",
       "Expected Disbursement Date": "예상 지급일",
       "Expected Disbursement On": "예상 지불 날짜",
-      "Expected Payment Amount": "예상 납부 금액",
+      "Expected Discount Fee Balance": "예상 할인 수수료 잔액",
+      "Expected Payment Amount": "예상 지불 금액",
       "Expected disbursement on": "예상 지급액:",
       "Expense Account": "지출 계좌",
       "Expense Account (DR)": "비용 계정(DR)",
@@ -2099,7 +2098,6 @@
       "Floating Rate Periods": "변동금리 기간",
       "Floating rate": "변동 금리",
       "Follow": "따르다",
-      "Forecast Payment Amount": "예측 납부 금액",
       "Frequency": "빈도",
       "Frequency Interval": "빈도 간격",
       "Frequency Interval for compounding": "합성 빈도 간격",
@@ -2444,7 +2442,6 @@
       "Municipality": "시/군/구",
       "N/A": "해당 없음",
       "NID": "국민 신분증",
-      "NPV Value": "순현재가치",
       "Name": "이름",
       "Name Decorated": "이름 장식",
       "Name of the Organization": "조직 이름",
@@ -2455,7 +2452,6 @@
       "Near Breach Evaluation Frequency": "임박한 위반 평가 빈도",
       "Near Breach Evaluation Frequency Type": "임박한 위반 평가 빈도 유형",
       "Near Breach Threshold": "임박한 위반 임계값",
-      "Net Amortization Amount": "순 상각 금액",
       "Net Cash": "순현금",
       "Net Present Value day count": "순현재가치 일수 계산",
       "New Interest Rate": "새로운 이자율",
@@ -2599,7 +2595,7 @@
       "Payment Type Id": "결제 유형 ID",
       "Payment due as of": "지급 기한:",
       "Payment due at": "결제 기한:",
-      "Payments Left": "Payments Left",
+      "Payments Left": "남은 납부 횟수",
       "Payments due on non working days": "휴무일에 지불 기한",
       "Payout Amount": "지급 금액",
       "Payout Country": "지급 국가",
@@ -2619,7 +2615,6 @@
       "Period": "기간",
       "Period From": "기간: 부터",
       "Period Number": "기간 번호",
-      "Period Payment Amount": "기간 납입금액",
       "Period Payment Frequency": "기간별 지급 빈도",
       "Period Payment Frequency Type": "기간별 지급 빈도 유형",
       "Period Payment Rate": "기간별 지급률",
@@ -4015,16 +4010,7 @@
       "username": "사용자 이름",
       "withhold tax for this account": "이 계정에 대한 원천징수세",
       "withoutCategory": "카테고리 없음",
-      "“Maker-Checker” principle requires every tasks": "\"Maker-Checker\" 원칙은 오류와 오용 가능성을 줄이기 위해 모든 작업을 두 사람이 완료하도록 요구합니다. 한 사람이 프로세스를 시작하고 두 번째 사람이 프로세스를 완료합니다.",
-      "Navigate directly to any platform area": "Navigate directly to any platform area",
-      "Profiles and accounts": "Profiles & accounts",
-      "Group lending": "Group lending",
-      "Center banking": "Center banking",
-      "Journals and ledger": "Journals & ledger",
-      "Configure offerings": "Configure offerings",
-      "Savings accounts": "Savings accounts",
-      "Offices and staff": "Offices & staff",
-      "System configuration": "Configuration"
+      "“Maker-Checker” principle requires every tasks": "\"Maker-Checker\" 원칙은 오류와 오용 가능성을 줄이기 위해 모든 작업을 두 사람이 완료하도록 요구합니다. 한 사람이 프로세스를 시작하고 두 번째 사람이 프로세스를 완료합니다."
     },
     "permissions": {
       "actions": {
@@ -4323,6 +4309,45 @@
       "validationSaved": "검증 데이터가 성공적으로 저장되었습니다.",
       "workingCapitalDiscountUpdated": "운전자금 대출 할인율이 성공적으로 업데이트되었습니다.",
       "unableToUpdateDiscount": "할인을 업데이트할 수 없습니다."
+    },
+    "selections": {
+      "standingInstructions": {
+        "accountTransferType": {
+          "account.transfer": "저축 계좌 이체",
+          "loan.repayment": "대출금 상환"
+        },
+        "standingInstructionPriority": {
+          "urgent": "긴급",
+          "high": "높음",
+          "medium": "보통",
+          "low": "낮음"
+        },
+        "standingInstructionStatus": {
+          "active": "활성",
+          "disabled": "비활성화됨",
+          "deleted": "삭제됨"
+        },
+        "accountType": {
+          "savings": "저축 계좌",
+          "loan": "대출 계좌"
+        },
+        "standingInstructionType": {
+          "fixed": "고정 금액",
+          "dues": "청구 금액"
+        },
+        "accountTransferRecurrenceType": {
+          "periodic": "정기적",
+          "as.per.dues": "일정/납입일 기준"
+        },
+        "frequencyperiodFrequencyType": {
+          "days": "일",
+          "weeks": "주",
+          "months": "월",
+          "years": "년"
+        },
+        "own.account": "본인 계좌",
+        "other.bank": "타행"
+      }
     }
   },
   "languages": {

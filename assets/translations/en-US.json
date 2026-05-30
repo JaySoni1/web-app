@@ -1600,7 +1600,11 @@
       "Active Overdue Client Loans": "Active Overdue Client Loans",
       "Active Overdue Group Loans": "Active Overdue Group Loans",
       "Active Status": "Active Status",
+      "Actual Amortization": "Actual Amortization",
       "Actual Available Balance": "Actual Available Balance",
+      "Actual Balance": "Actual Balance",
+      "Actual Discount Fee Balance": "Actual Discount Fee Balance",
+      "Actual Payment": "Actual Payment",
       "Add Clients": "Add Clients",
       "Add Fee Frequency": "Add Fee Frequency",
       "Add Groups": "Add Groups",
@@ -1918,7 +1922,6 @@
       "Default Savings Account": "Default Savings Account",
       "Default Shares per Client": "Default Shares per Client",
       "Default Theme": "Default Theme",
-      "Deferred Balance": "Deferred Balance",
       "Deferred income": "Deferred income",
       "Deleted": "Deleted",
       "Delinquency Action": "Delinquency Action",
@@ -2040,8 +2043,10 @@
       "Existing Meeting Date": "Existing Meeting Date",
       "Expected Amortization Amount": "Expected Amortization Amount",
       "Expected Amount": "Expected Amount",
+      "Expected Balance": "Expected Balance",
       "Expected Disbursement Date": "Expected Disbursement Date",
       "Expected Disbursement On": "Expected Disbursement On",
+      "Expected Discount Fee Balance": "Expected Discount Fee Balance",
       "Expected Payment Amount": "Expected Payment Amount",
       "Expected disbursement on": "Expected disbursement on",
       "Expense Account": "Expense Account",
@@ -2100,7 +2105,6 @@
       "Floating Rate Periods": "Floating Rate Periods",
       "Floating rate": "Floating Rate",
       "Follow": "Follow",
-      "Forecast Payment Amount": "Forecast Payment Amount",
       "Frequency": "Frequency",
       "Frequency Interval": "Frequency Interval",
       "Frequency Interval for compounding": "Frequency Interval for compounding",
@@ -2440,7 +2444,6 @@
       "Municipality": "Municipality",
       "N/A": "N/A",
       "NID": "NID",
-      "NPV Value": "NPV Value",
       "Name": "Name",
       "Name Decorated": "Name Decorated",
       "Name of the Organization": "Name of the Organization",
@@ -2451,7 +2454,6 @@
       "Near Breach Evaluation Frequency": "Near Breach Evaluation Frequency",
       "Near Breach Evaluation Frequency Type": "Near Breach Evaluation Frequency Type",
       "Near Breach Threshold": "Near Breach Threshold",
-      "Net Amortization Amount": "Net Amortization Amount",
       "Net Cash": "Net Cash",
       "Net Present Value day count": "Net Present Value Day Count",
       "New Interest Rate": "New Interest Rate",
@@ -4108,7 +4110,7 @@
       "username": "username",
       "withhold tax for this account": "withhold tax for this account",
       "withoutCategory": "Without Category",
-      "“Maker-Checker” principle requires every tasks": "The “Maker-Checker” principle requires every tasks to be completed by two people to reduce the chance of errors and misuse. One person initiates the process and the second completes it.",
+      "“Maker-Checker” principle requires every tasks": "The “Maker-Checker” principle requires every task to be completed by two people to reduce the chance of errors and misuse. One person initiates the process and the second completes it.",
       "Navigate directly to any platform area": "Navigate directly to any platform area",
       "Profiles and accounts": "Profiles & accounts",
       "Group lending": "Group lending",
@@ -4416,6 +4418,45 @@
       "validationSaved": "Validation data saved successfully.",
       "workingCapitalDiscountUpdated": "Working capital discount was updated successfully.",
       "unableToUpdateDiscount": "Unable to update discount."
+    },
+    "selections": {
+      "standingInstructions": {
+        "accountTransferType": {
+          "account.transfer": "Savings Transfer",
+          "loan.repayment": "Loan Repayment"
+        },
+        "standingInstructionPriority": {
+          "urgent": "Urgent",
+          "high": "High",
+          "medium": "Medium",
+          "low": "Low"
+        },
+        "standingInstructionStatus": {
+          "active": "Active",
+          "disabled": "Disabled",
+          "deleted": "Deleted"
+        },
+        "accountType": {
+          "savings": "Savings Account",
+          "loan": "Loan Account"
+        },
+        "standingInstructionType": {
+          "fixed": "Fixed Amount",
+          "dues": "Dues Amount"
+        },
+        "accountTransferRecurrenceType": {
+          "periodic": "Periodic",
+          "as.per.dues": "As Per Dues"
+        },
+        "frequencyperiodFrequencyType": {
+          "days": "Days",
+          "weeks": "Weeks",
+          "months": "Months",
+          "years": "Years"
+        },
+        "own.account": "Own Account",
+        "other.bank": "Other Bank"
+      }
     }
   },
   "languages": {

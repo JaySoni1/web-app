@@ -1,4 +1,4 @@
-{
+﻿{
   "APP_NAME": "Mifos® X WebApp",
   "Logged in as": "Angemeldet als",
   "Remember me": "Erinnere dich an mich",
@@ -1278,7 +1278,7 @@
       "Global Configuration options": "Globale Konfigurationsoptionen und ihr aktueller Status. Für weitere Details klicken Sie",
       "Global Impact": "Globale Auswirkungen",
       "Grace On Interest": "Gnade auf Zinsen",
-      "Grace On Principal": "Grace On Principal",
+      "Grace On Principal": "Tilgungsaufschub",
       "Group Details": "Gruppendetails",
       "Group Members": "Gruppenmitglieder",
       "Group Membership": "Gruppenmitgliedschaft",
@@ -1553,8 +1553,7 @@
       "identifier id": "Identifikator-ID",
       "savings-transaction-datatable-tab works": "saving-transaction-datatable-tab funktioniert",
       "successfully select option": "erfolgreich. Bitte wählen Sie eine der folgenden Optionen aus, um fortzufahren.",
-      "undo_account_transfer": "Kontotransfer rückgängig machen",
-      "Quick Access": "Quick Access"
+      "undo_account_transfer": "Kontotransfer rückgängig machen"
     },
     "inputs": {
       "# Remittance": "# Überweisung",
@@ -1596,7 +1595,11 @@
       "Active Overdue Client Loans": "Aktive überfällige Kundenkredite",
       "Active Overdue Group Loans": "Aktive überfällige Gruppenkredite",
       "Active Status": "Aktiver Status",
+      "Actual Amortization": "Tatsächliche Amortisierung",
       "Actual Available Balance": "Tatsächlich verfügbaren Guthaben",
+      "Actual Balance": "Tatsächlicher Saldo",
+      "Actual Discount Fee Balance": "Tatsächlicher Rabattgebührensaldo",
+      "Actual Payment": "Tatsächliche Zahlung",
       "Add Clients": "Kunden hinzufügen",
       "Add Fee Frequency": "Gebührenhäufigkeit hinzufügen",
       "Add Groups": "Gruppen hinzufügen",
@@ -1635,7 +1638,6 @@
       "Amortization Schedule": "Tilgungsplan",
       "Amortization Type": "Amortisationsart",
       "Amortized Amount": "Amortisierter Betrag",
-      "Amortized Income": "Amortisiertes Einkommen",
       "Amount": "Menge",
       "Amount Collected": "Eingezogener Betrag",
       "Amount Paid": "Bezahlter Betrag",
@@ -1645,7 +1647,6 @@
       "Amount Range To": "Betragsbereich bis",
       "Amount Received/Returned": "Erhaltener/zurückgegebener Betrag",
       "Amount to be Reserved": "Zu reservierender Betrag",
-      "Annual EIR": "Jährlicher EIR",
       "Annual Fees Transaction Date": "Transaktionsdatum der Jahresgebühren",
       "Applicable From Date": "Gültig ab Datum",
       "Applicant": "Antragsteller",
@@ -1759,7 +1760,7 @@
       "Charges": "Gebühren",
       "Checked Date": "Geprüftes Datum",
       "Checked To Date": "Bisher überprüft",
-      "Checker": "Checker",
+      "Checker": "Prüfer",
       "Checker From Date": "Checker-Von-Datum",
       "Checker Inbox": "Checker-Posteingang",
       "Cheque": "Überprüfen",
@@ -1802,7 +1803,7 @@
       "Closure Date": "Datum der Schließung",
       "Closure Reason": "Schließungsgrund",
       "Code": "Code",
-      "Code Name": "Code Name",
+      "Code Name": "Codename",
       "Collateral": "Sicherheit",
       "Collateral Name": "Name der Sicherheit",
       "Collateral Type": "Art der Sicherheit",
@@ -1875,7 +1876,6 @@
       "DEFERRED INCOME RECOGNITION": "Erfassung abgegrenzter Erträge",
       "DETAILS": "EINZELHEITEN",
       "Daily": "Täglich",
-      "Daily EIR": "Täglicher EIR",
       "Dashboard": "Armaturenbrett",
       "Data": "Daten",
       "Data Table": "Datentabelle",
@@ -1915,7 +1915,6 @@
       "Default Savings Account": "Standardsparkonto",
       "Default Shares per Client": "Standardanteile pro Kunde",
       "Default Theme": "Standardthema",
-      "Deferred Balance": "Aufgeschobener Saldo",
       "Deferred income": "Rechnungsabgrenzungsposten",
       "Deleted": "Gelöscht",
       "Delinquency Action": "Kriminalitätsaktion",
@@ -1964,8 +1963,6 @@
       "Disbursement on": "Auszahlung am",
       "Discount": "Rabatt",
       "Discount Default": "Standardrabatt",
-      "Discount Factor": "Diskontfaktor",
-      "Discount Fee": "Diskontgebühr",
       "Discount must be greater than or equal to 0": "Der Rabatt muss größer oder gleich 0 sein",
       "Display Name": "Anzeigename",
       "Dividend Amount": "Dividendenbetrag",
@@ -1994,7 +1991,7 @@
       "Economic Activity": "Wirtschaftstätigkeit",
       "Effective Date": "Datum des Inkrafttretens",
       "Effective From": "Gültig ab",
-      "Email": "Email",
+      "Email": "E-Mail",
       "Email Address": "E-Mail-Adresse",
       "Email ID": "E-Mail-ID",
       "Email should be a": "E-Mail sollte a sein",
@@ -2040,8 +2037,10 @@
       "Existing Meeting Date": "Bestehendes Besprechungsdatum",
       "Expected Amortization Amount": "Erwarteter Amortisationsbetrag",
       "Expected Amount": "Erwarteter Betrag",
+      "Expected Balance": "Erwarteter Saldo",
       "Expected Disbursement Date": "Voraussichtliches Auszahlungsdatum",
       "Expected Disbursement On": "Voraussichtliche Auszahlung am",
+      "Expected Discount Fee Balance": "Erwarteter Rabattgebührensaldo",
       "Expected Payment Amount": "Erwarteter Zahlungsbetrag",
       "Expected disbursement on": "Voraussichtliche Auszahlung am",
       "Expense Account": "Aufwandskonto",
@@ -2100,7 +2099,6 @@
       "Floating Rate Periods": "Zeiträume mit variablem Zinssatz",
       "Floating rate": "Variabler Zinssatz",
       "Follow": "Folgen",
-      "Forecast Payment Amount": "Prognostizierter Zahlungsbetrag",
       "Frequency": "Frequenz",
       "Frequency Interval": "Frequenzintervall",
       "Frequency Interval for compounding": "Häufigkeitsintervall für die Aufzinsung",
@@ -2177,7 +2175,7 @@
       "Include in Customer Loan Counter": "In Kundenkreditzähler einbeziehen",
       "Income Account": "Einkommenskonto",
       "Income From Discount Fee": "Einnahmen aus Diskontgebühr",
-      "Income Modification": "Einkommensanpassung",
+      "Income Modification": "Einkommensänderung",
       "Income capitalization": "Einkommenskapitalisierung",
       "Income capitalization calculation type": "Berechnungsart der Einkommenskapitalisierung",
       "Income capitalization strategy": "Strategie zur Ertragskapitalisierung",
@@ -2445,7 +2443,6 @@
       "Municipality": "Gemeinde",
       "N/A": "N / A",
       "NID": "Nationale ID",
-      "NPV Value": "Kapitalwert",
       "Name": "Name",
       "Name Decorated": "Name dekoriert",
       "Name of the Organization": "Name der Organisation",
@@ -2456,7 +2453,6 @@
       "Near Breach Evaluation Frequency": "Bewertungshäufigkeit für Beinahe-Verstoß",
       "Near Breach Evaluation Frequency Type": "Typ der Bewertungshäufigkeit für Beinahe-Verstoß",
       "Near Breach Threshold": "Schwellenwert für Beinahe-Verstoß",
-      "Net Amortization Amount": "Netto-Amortisationsbetrag",
       "Net Cash": "Nettobargeld",
       "Net Present Value day count": "Nettobarwert-Tageszahl",
       "New Interest Rate": "Neuer Zinssatz",
@@ -2600,7 +2596,7 @@
       "Payment Type Id": "Zahlungsart-ID",
       "Payment due as of": "Zahlung fällig ab",
       "Payment due at": "Zahlung fällig bei",
-      "Payments Left": "Payments Left",
+      "Payments Left": "Verbleibende Zahlungen",
       "Payments due on non working days": "Zahlungen sind an arbeitsfreien Tagen fällig",
       "Payout Amount": "Auszahlungsbetrag",
       "Payout Country": "Auszahlungsland",
@@ -2620,7 +2616,6 @@
       "Period": "Zeitraum",
       "Period From": "Zeitraum Von",
       "Period Number": "Periodennummer",
-      "Period Payment Amount": "Periodenzahlungsbetrag",
       "Period Payment Frequency": "Zahlungsperiode Häufigkeit",
       "Period Payment Frequency Type": "Zahlungsperiode Häufigkeit Art",
       "Period Payment Rate": "Zahlungsrate für den Zeitraum",
@@ -3033,7 +3028,7 @@
       "Withdrwals till Date": "Auszahlungen bis zum Datum",
       "Withhold Tax is Applicable": "Es fällt eine Quellensteuer an",
       "Within Bank": "Innerhalb der Bank",
-      "Workflow Jobs": "Workflow Jobs",
+      "Workflow Jobs": "Workflow-Jobs",
       "Working Days": "Arbeitstage",
       "Write Off Date": "Abschreibungsdatum",
       "Write off on": "Abschreiben am",
@@ -3560,7 +3555,7 @@
       "Effective Date From": "Datum des Inkrafttretens von",
       "Effective Date To": "Datum des Inkrafttretens bis",
       "Elastic Search": "Elastische Suche",
-      "Email": "Email",
+      "Email": "E-Mail",
       "Email Service Configuration": "Konfiguration des E-Mail-Dienstes",
       "Employee represents loan officers": "Ein Mitarbeiter vertritt Kreditsachbearbeiter ohne Zugriff auf Systeme",
       "EnterAmount": "Betrag eingeben",
@@ -4017,16 +4012,7 @@
       "username": "Nutzername",
       "withhold tax for this account": "für dieses Konto die Steuer einbehalten",
       "withoutCategory": "Ohne Kategorie",
-      "“Maker-Checker” principle requires every tasks": "Das „Maker-Checker“-Prinzip erfordert, dass jede Aufgabe von zwei Personen erledigt wird, um das Risiko von Fehlern und Missbrauch zu verringern. Eine Person leitet den Prozess ein und die zweite Person schließt ihn ab.",
-      "Navigate directly to any platform area": "Navigate directly to any platform area",
-      "Profiles and accounts": "Profiles & accounts",
-      "Group lending": "Group lending",
-      "Center banking": "Center banking",
-      "Journals and ledger": "Journals & ledger",
-      "Configure offerings": "Configure offerings",
-      "Savings accounts": "Savings accounts",
-      "Offices and staff": "Offices & staff",
-      "System configuration": "Configuration"
+      "“Maker-Checker” principle requires every tasks": "Das „Maker-Checker“-Prinzip erfordert, dass jede Aufgabe von zwei Personen erledigt wird, um das Risiko von Fehlern und Missbrauch zu verringern. Eine Person leitet den Prozess ein und die zweite Person schließt ihn ab."
     },
     "permissions": {
       "actions": {
@@ -4261,6 +4247,45 @@
       "validationSaved": "Validierungsdaten erfolgreich gespeichert.",
       "workingCapitalDiscountUpdated": "Betriebskapitalrabatt wurde erfolgreich aktualisiert.",
       "unableToUpdateDiscount": "Rabatt konnte nicht aktualisiert werden."
+    },
+    "selections": {
+      "standingInstructions": {
+        "accountTransferType": {
+          "account.transfer": "Umbuchung auf Sparkonto",
+          "loan.repayment": "Darlehensrückzahlung"
+        },
+        "standingInstructionPriority": {
+          "urgent": "Dringend",
+          "high": "Hoch",
+          "medium": "Mittel",
+          "low": "Niedrig"
+        },
+        "standingInstructionStatus": {
+          "active": "Aktiv",
+          "disabled": "Deaktiviert",
+          "deleted": "Gelöscht"
+        },
+        "accountType": {
+          "savings": "Sparkonto",
+          "loan": "Darlehenskonto"
+        },
+        "standingInstructionType": {
+          "fixed": "Fester Betrag",
+          "dues": "Fälliger Betrag"
+        },
+        "accountTransferRecurrenceType": {
+          "periodic": "Periodisch",
+          "as.per.dues": "Nach Fälligkeit"
+        },
+        "frequencyperiodFrequencyType": {
+          "days": "Tage",
+          "weeks": "Wochen",
+          "months": "Monate",
+          "years": "Jahre"
+        },
+        "own.account": "Eigenes Konto",
+        "other.bank": "Andere Bank"
+      }
     },
     "auditTrail": {
       "actions": {
@@ -4749,7 +4774,7 @@
     "Remove Client from Group": "Client aus Gruppe entfernen",
     "Recurring Deposits Account": "Konto für wiederkehrende Einlagen",
     "Remove Period": "Punkt entfernen",
-    "Resume Delinquency Classification": "Resume Delinquency Classification",
+    "Resume Delinquency Classification": "Delinquenzklassifizierung fortsetzen",
     "Repayment schedule will start the installment": "Der Rückzahlungsplan beginnt mit den Ratenterminen ab dem Einreichungsdatum oder dem Auszahlungsdatum",
     "Savings Account": "Sparkonto",
     "Sets the balance required for interest calculation": "Legt den für die Zinsberechnung erforderlichen Saldo fest",
